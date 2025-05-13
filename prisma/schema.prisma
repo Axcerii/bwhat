@@ -10,27 +10,31 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id            Int           @id @default(autoincrement())
-  email         String        @unique
-  password      String
-  firstName     String
-  lastName      String
-  role          Role          @default(USER)
-  isVerified    Boolean       @default(false)
-  
-  createdAt     DateTime      @default(now())
-  updatedAt  DateTime @updatedAt
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  emailVerified DateTime?
+  passwordHash  String
+  role          Role     @default(USER)
+
+  name          String?
+
+  //accounts      Account[]
+  //sessions      Session[]
 
   addresses     Address[]
   orders        Order[]
   subscriptions Subscription[]
+  newsletterSubscribers NewsletterSubscriber?
 
-  @@map("users") // nom réel de la table en SQL
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("users")
 }
 
 enum Role {
@@ -51,6 +55,8 @@ model Address {
 
   user       User     @relation(fields: [userId], references: [id])
 
+  orders Order[]
+
   @@map("addresses")
 }
 
@@ -65,6 +71,71 @@ model Box {
   updatedAt   DateTime  @updatedAt
 
   subscriptions Subscription[]
+  orders Order[]
 
   @@map("boxes")
 }
+
+model Subscription {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  boxId     Int
+  isActive  Boolean  @default(true)
+  startDate DateTime @default(now())
+  endDate   DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User     @relation(fields: [userId], references: [id])
+  box       Box      @relation(fields: [boxId], references: [id])
+
+  @@map("subscriptions")
+}
+
+model Order {
+  id         Int       @id @default(autoincrement())
+  userId     Int
+  boxId      Int
+  addressId  Int
+  status     OrderStatus @default(PENDING)
+  price      Float
+  orderedAt  DateTime  @default(now())
+
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  user       User      @relation(fields: [userId], references: [id])
+  box        Box       @relation(fields: [boxId], references: [id])
+  address    Address   @relation(fields: [addressId], references: [id])
+
+  @@map("orders")
+}
+
+enum OrderStatus {
+  PENDING
+  SHIPPED
+  DELIVERED
+  CANCELED
+}
+
+
+model NewsletterSubscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  userId    Int?     @unique// Peut être null si c’est un visiteur
+
+  subscribedAt DateTime @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  user      User?    @relation(fields: [userId], references: [id])
+
+  @@map("newsletter_subscribers")
+}
+
+
+
+
+
+
+

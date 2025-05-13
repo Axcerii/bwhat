@@ -1,0 +1,47 @@
+:root{
+        --whiteBwhat: #fff;
+        --blackBwhat: #1b1b1b;
+        --blueBwhat: #82A6F2;
+        --lightBlueBwhat: #B4C9F7;
+        --orangeBwhat: #F26647;
+        --yellowBwhat: #EB9936;
+        --pinkBwhat: #FFEDEB;
+        --sansFont: 'Inter', sans-serif;
+        --serifFont: 'Merriweather', serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+html{
+  background-color: var(--pinkBwhat);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.blueBwhatSvg{
+  filter:  brightness(0) saturate(100%) invert(59%) sepia(46%) saturate(537%) hue-rotate(186deg) brightness(102%) contrast(90%);
+}
