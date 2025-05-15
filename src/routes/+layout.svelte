@@ -101,9 +101,10 @@
     .menu-bottom{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 2rem;
         font-size: 1.2rem;
-        margin: auto 0;
+        margin: auto 1rem;
     }
 
     .menu-bottom li{
@@ -111,6 +112,8 @@
         text-transform: uppercase;
         font-family: var(--sansFont);
         font-size: 1rem;
+        text-align: center;
+
     }
 
     .social-media{
