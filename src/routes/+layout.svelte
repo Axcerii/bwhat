@@ -4,15 +4,19 @@
     import instagram from "$lib/assets/social/instagram.svg"
     import linkedin from "$lib/assets/social/linkedin.svg"
     import tiktok from "$lib/assets/social/tiktok.svg"
+    import menu from "$lib/assets/structure/menu.svg"
 </script>
 <header>
     <nav>
-        <button class="menu-burger">
-            <img src="{logo}" alt="">
-        </button>
-        <a href="/" class="header-logo">
-            <img alt="logo de Bwhat" src={logo} width="150" class="blueBwhatSvg"/>
-        </a>
+        <div class="top-menu-responsive">
+            <button class="menu-burger">
+                <img src="{menu}" alt="Bouton d'accès au menu" width="35">
+            </button>
+
+            <a href="/" class="header-logo">
+                <img alt="logo de Bwhat" src={logo} width="150" class="blueBwhatSvg"/>
+            </a>
+        </div>
         <ul class="menu-top">
             <li><a href="/a-propos">À propos</a></li>
             <li><a href="/produits">Nos produits</a></li>
@@ -113,7 +117,10 @@
         font-family: var(--sansFont);
         font-size: 1rem;
         text-align: center;
+    }
 
+    .menu-burger{
+        display: none;
     }
 
     .social-media{
@@ -144,13 +151,24 @@
         font-family: var(--serifFont);
     }
 
+    .top-menu-responsive{
+        display: flex;
+        position: relative;
+    }
+
     @media screen and (max-width: 768px) {
         header{
             border-top: none;
         }
 
+        .menu-burger{
+            display: block;
+        }
+
         .header-logo{
-            margin: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);            
         }
 
         nav{
@@ -159,11 +177,14 @@
 
         .menu-top{
             flex-direction: column;
-            display: none;
         }
 
         .menu-bottom{
             flex-direction: column;
+        }
+
+        .menu-bottom li{
+            text-align: left;
         }
 
         footer{

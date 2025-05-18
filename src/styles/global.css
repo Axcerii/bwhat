@@ -6,6 +6,7 @@
         --orangeBwhat: #F26647;
         --yellowBwhat: #EB9936;
         --pinkBwhat: #FFEDEB;
+        --greyBwhat: #44444473;
         --sansFont: 'Inter', sans-serif;
         --serifFont: 'Merriweather', serif;
 }
@@ -20,7 +21,7 @@
 
 html, body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: var(--serifFont);
 }
 
 html{
@@ -42,6 +43,52 @@ ul {
   list-style: none;
 }
 
+/* SVG Colorations */
+
 .blueBwhatSvg{
   filter:  brightness(0) saturate(100%) invert(59%) sepia(46%) saturate(537%) hue-rotate(186deg) brightness(102%) contrast(90%);
+}
+
+.orangeBwhatSvg{
+  filter:  brightness(0) saturate(100%) invert(55%) sepia(15%) saturate(7498%) hue-rotate(333deg) brightness(99%) contrast(92%);
+}
+
+.pinkBwhatSvg{
+  filter: brightness(0) saturate(100%) invert(94%) sepia(3%) saturate(1145%) hue-rotate(315deg) brightness(99%) contrast(104%);
+}
+
+.yellowBwhatSvg{
+  filter: brightness(0) saturate(100%) invert(58%) sepia(92%) saturate(348%) hue-rotate(351deg) brightness(93%) contrast(99%);
+
+
+}
+
+/* Headline */
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 3rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+}
+
+/* Classe partagée */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
 }
