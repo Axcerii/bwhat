@@ -4,20 +4,29 @@
     import instagram from "$lib/assets/social/instagram.svg"
     import linkedin from "$lib/assets/social/linkedin.svg"
     import tiktok from "$lib/assets/social/tiktok.svg"
-    import menu from "$lib/assets/structure/menu.svg"
+	import { slide } from "svelte/transition";
+
+    let menu = $state("/menu.svg");
+    
+    let isOpen = $state(false);
+
+    function toggleMenu() {
+        isOpen = !isOpen;
+        menu = isOpen ? "/cross.svg" : "/menu.svg";
+    }
 </script>
 <header>
     <nav>
         <div class="top-menu-responsive">
-            <button class="menu-burger">
-                <img src="{menu}" alt="Bouton d'accès au menu" width="35">
+            <button class="menu-burger" onclick={toggleMenu}>
+                <img src={menu} alt="Bouton d'accès au menu" width="35">
             </button>
 
             <a href="/" class="header-logo">
                 <img alt="logo de Bwhat" src={logo} width="150" class="blueBwhatSvg"/>
             </a>
         </div>
-        <ul class="menu-top">
+        <ul class="menu-top" class:open={isOpen} transition:slide>
             <li><a href="/a-propos">À propos</a></li>
             <li><a href="/produits">Nos produits</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -156,13 +165,14 @@
         position: relative;
     }
 
-    @media screen and (max-width: 768px) {
-        header{
-            border-top: none;
-        }
 
+    @media screen and (max-width: 1024px) {
         .menu-burger{
             display: block;
+        }
+
+        header{
+            border-top: none;
         }
 
         .header-logo{
@@ -177,7 +187,16 @@
 
         .menu-top{
             flex-direction: column;
+            display: none;
         }
+
+        .menu-top.open{
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
 
         .menu-bottom{
             flex-direction: column;

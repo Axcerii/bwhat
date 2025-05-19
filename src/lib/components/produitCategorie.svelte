@@ -1,28 +1,26 @@
 <script>
     let { imageProduct, imageCategorie, titre, position=false, alt, productX = '0', productY = '0' } = $props();
 
-    let textAlign , rightLeft;
+    let textAlign , rightLeft, justifyContent;
 
     if(position){
         textAlign = "left";
+        rightLeft = `right: ${productX}`;
+        justifyContent = "flex-start;";
     }
     else{
         textAlign = "right";
-    }
-
-    if(position){
-        rightLeft = `right: ${productX}`;
-    }
-    else{
         rightLeft = `left: ${productX}`;
+        justifyContent = "flex-end";
     }
 
-    let imgStyle = `${rightLeft}; top: ${productY}`;
+    let imgStyle = `${rightLeft}; top: ${productY};`;
     let pStyle = `text-align: ${textAlign};`;
+    let divStyle = `background-image: url('/produits/${imageCategorie}.webp'); justify-content: ${justifyContent};`;
 
 </script>
 
-<div style="background-image: url('/produits/{imageCategorie}.webp');">
+<div style={divStyle}>
     <img src="/produits/{imageProduct}.webp" alt={alt} style={imgStyle}>
     <p style={pStyle}>{titre}</p> 
 </div>
@@ -35,7 +33,6 @@
         position: relative;
         background-size: cover;
         background-position: center;
-        justify-content: flex-end;
     }
     
     p{
@@ -55,6 +52,6 @@
         width: auto;
         top: 50%;
         transform: translateY(-50%);
-        left: 0;
+        overflow: hidden;
     }
 </style>

@@ -171,7 +171,7 @@
 
     .presentation{
         display: flex;
-        margin: 3rem auto 3rem 20%;
+        margin: 3rem auto 3rem 10%;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
@@ -244,6 +244,23 @@
         margin-top: -8rem;
     }
 
+    @media screen and (max-width: 1024px) {
+        .boites{
+            flex-direction: column;
+        }
+        
+        .presentation{
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+        }
+
+        .presentation > h2{
+            text-align: center;
+            width: 100%;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .banner > div{
             width: 100%;
@@ -254,10 +271,6 @@
             width: 100%;
         }
 
-        .boites{
-            flex-direction: column;
-        }
-
         .description{
             width: 90%;
             text-align: left;
@@ -265,17 +278,6 @@
 
         .description h2{
             text-align: center;
-        }
-
-        .presentation{
-            flex-direction: column;
-            width: 90%;
-            margin: auto;
-        }
-
-        .presentation > h2{
-            text-align: center;
-            width: 100%;
         }
 
         .notre-histoire{
