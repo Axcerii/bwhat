@@ -55,12 +55,17 @@
 
     .newsletter-button-container{
         display: flex;
-        justify-content: right;
+        width: 10rem;
+        margin: auto 0 auto auto;
     }
 
     @media screen and (max-width: 768px) {
         form{
             width: 90%;
+        }
+
+        .newsletter-button-container{
+            width: 100%;
         }
     }
 </style>

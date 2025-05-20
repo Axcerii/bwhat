@@ -14,6 +14,7 @@
         font-weight: bold;
         font-family: var(--sansFont);
         font-size: 1.5rem;
+        width: 100%;
     }
 
     button:hover{

@@ -7,7 +7,7 @@
  </script>
 
  <svelte:head>
-     <title>Produits - Bwhat</title>
+     <title>Nos produits anti-stress et déconnexion - Bwhat</title>
      <style>
         html{
             overflow-x: hidden;
@@ -25,7 +25,7 @@
         <div>
             <h2>Box sport & bien être</h2>
             <p>Pour celles et ceux qui souhaitent éveiller leur <strong>curiosité</strong> et s’offrir une dose de nouveauté chaque mois.</p>
-            <h3>Elle contient :</h3>
+            <h3>Elle contient&nbsp;:</h3>
             <div class="produits-contenu-container">
                 <div class="produits-card">
                     <img src={boiteSport} alt="Aperçu de la boite sport & découverte">
@@ -78,7 +78,7 @@
         <div id="decouverte">
             <h2>Box découverte</h2>
             <p>Pour celles et ceux qui veulent bouger, respirer, <strong>se reconnecter à leur corps.</strong></p>
-            <h3>Elle contient :</h3>
+            <h3>Elle contient&nbsp;:</h3>
             <div class="produits-contenu-container secondeBoite">
                 <div class="produits-card">
                     <img src={boiteDecouverte} alt="Aperçu de la boite découverte">
@@ -176,7 +176,7 @@
     .produits-card{
         display: flex;
         flex-direction: column;
-        width: 40rem;
+        width: 40%;
         position: relative;
         gap: 2rem;
     }
@@ -188,7 +188,7 @@
     .produits-card img{
         width: 100%;
         border-radius: 25px;
-        height: 40rem;
+        height: 40vw;
         object-fit: cover;
     }
 
@@ -231,7 +231,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 30rem;
+        width: 30%;
         justify-content: center;
     }
 
@@ -285,6 +285,11 @@
 
         .produits-card img{
             width: 100%;
+        }
+
+        .produits-contenu{
+            width: 100%;
+            margin: auto;
         }
 
         .produits > div > p{

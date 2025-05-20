@@ -8,7 +8,8 @@
     import Faq from "$lib/components/faq.svelte";
 </script>
     <svelte:head>
-        <title>À propos - Bwhat</title>
+        <title>La mission Bwhat : bien-être, anti-stress & digital detox</title>
+        <meta name="description" content="Découvrez l’histoire de Bwhat : l’entreprise française qui conçoit des box mensuelles bien-être et anti-stress pour favoriser la déconnexion digitale.">
     </svelte:head>
 
     <main>

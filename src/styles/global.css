@@ -59,8 +59,6 @@ ul {
 
 .yellowBwhatSvg{
   filter: brightness(0) saturate(100%) invert(58%) sepia(92%) saturate(348%) hue-rotate(351deg) brightness(93%) contrast(99%);
-
-
 }
 
 /* Headline */

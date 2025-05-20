@@ -1,10 +1,14 @@
 <script>
     let { children } = $props();
+    
+
+    import { page } from "$app/stores";
     import logo from "$lib/assets/logo_bwhat.svg"
     import instagram from "$lib/assets/social/instagram.svg"
     import linkedin from "$lib/assets/social/linkedin.svg"
     import tiktok from "$lib/assets/social/tiktok.svg"
 	import { slide } from "svelte/transition";
+    import { derived } from "svelte/store";
 
     let menu = $state("/menu.svg");
     
@@ -14,6 +18,11 @@
         isOpen = !isOpen;
         menu = isOpen ? "/cross.svg" : "/menu.svg";
     }
+
+    const specialFooter = derived(page, ($page) => $page.url.pathname === '/se-connecter' || $page.url.pathname === '/creer-un-compte');
+
+
+
 </script>
 <header>
     <nav>
@@ -28,28 +37,28 @@
         </div>
         <ul class="menu-top" class:open={isOpen} transition:slide>
             <li><a href="/a-propos">À propos</a></li>
-            <li><a href="/produits">Nos produits</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/register">S'incrire</a></li>
-            <li><a href="/login">Se connecter</a></li>
+            <li><a href="/nos-produits">Nos produits</a></li>
+            <li><a href="/nous-contacter">Contact</a></li>
+            <li><a href="/creer-un-compte">S'incrire</a></li>
+            <li><a href="/se-connecter">Se connecter</a></li>
         </ul>
     </nav>
 </header>
 
 {@render children()}
 
-<footer>
+<footer class:special-style={$specialFooter}>
     <a href="/" class="footer-logo">
         <img alt="logo de Bwhat" src={logo} width="200" class="blueBwhatSvg"/>
     </a>
 
     <ul class="menu-bottom">
         <li><a href="/a-propos">À propos</a></li>
-        <li><a href="/produits">Nos produits</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/register">S'incrire</a></li>
-        <li><a href="/login">Se connecter</a></li>
-        <li><a href="/login">Mentions légales</a></li>
+        <li><a href="/nos-produits">Nos produits</a></li>
+        <li><a href="/nous-contacter">Contact</a></li>
+        <li><a href="/creer-un-compte">S'incrire</a></li>
+        <li><a href="/se-connecter">Se connecter</a></li>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
     </ul>
     <div class="social-media">
         <ul>
@@ -165,6 +174,13 @@
         position: relative;
     }
 
+    .special-style{
+        background-color: var(--orangeBwhat);
+    }
+
+    .special-style img{
+        filter: brightness(0) saturate(100%) invert(1)!important;
+    }
 
     @media screen and (max-width: 1024px) {
         .menu-burger{

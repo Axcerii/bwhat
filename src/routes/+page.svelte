@@ -11,7 +11,8 @@
 </script>
 
 <svelte:head>
-    <title>Bwhat ! Restez connectés à l'essentiel !</title>
+    <title>Bwhat - Votre box mensuelle bien-être et digital detox</title>
+    <meta name="description" content="Bwhat, la box mensuelle bien être pour se déconnecter des écrans : activités manuelles anti-stress, recettes bien-être et habitudes de déconnexion digitale.">
 </svelte:head>
 <main>
     <section class="banner">
