@@ -1,14 +1,21 @@
 <script>
     let { style = "" } = $props();
+
+    import post1 from "$lib/assets/social/instagram/instagramPost1.webp";
+    import post2 from "$lib/assets/social/instagram/instagramPost2.webp";
+    import post3 from "$lib/assets/social/instagram/instagramPost3.webp";
+    import post4 from "$lib/assets/social/instagram/instagramPost4.webp";
+    import post5 from "$lib/assets/social/instagram/instagramPost5.webp";
 </script>
 
 <section style={style}>
     <h2>Rejoignez nous sur instagram</h2>
     <div class="instagram-post">
-        <a href="https://www.instagram.com/__bwhat__/"><img src="https://picsum.photos/1200/600" alt="Visuel de la newsletter" class="instagram-post"></a>
-        <a href="https://www.instagram.com/__bwhat__/"><img src="https://picsum.photos/1200/601" alt="Visuel de la newsletter" class="instagram-post"></a>
-        <a href="https://www.instagram.com/__bwhat__/"><img src="https://picsum.photos/1200/602" alt="Visuel de la newsletter" class="instagram-post"></a>
-        <a href="https://www.instagram.com/__bwhat__/"><img src="https://picsum.photos/1200/603" alt="Visuel de la newsletter" class="instagram-post"></a>
+        <a href="https://www.instagram.com/__bwhat__/" target="_blank"><img src={post1} alt="Visuel de la newsletter"></a>
+        <a href="https://www.instagram.com/__bwhat__/" target="_blank"><img src={post2} alt="Visuel de la newsletter"></a>
+        <a href="https://www.instagram.com/__bwhat__/" target="_blank"><img src={post3} alt="Visuel de la newsletter"></a>
+        <a href="https://www.instagram.com/__bwhat__/" target="_blank"><img src={post4} alt="Visuel de la newsletter"></a>
+        <a href="https://www.instagram.com/__bwhat__/" target="_blank"><img src={post5} alt="Visuel de la newsletter"></a>
     </div>
 </section>
 
@@ -25,16 +32,14 @@
 
     .instagram-post{
         display: flex;
-        gap: 2rem;
-        justify-content: center;
+        gap: 1rem;
         width: 90%;
-        flex-wrap: wrap;
-        margin: auto;
+        margin: auto 2rem;
     }
 
     .instagram-post img{
-        width: 15rem;
-        height: 10rem;
+        width: 12rem;
+        height: 12rem;
         border-radius: 25px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;

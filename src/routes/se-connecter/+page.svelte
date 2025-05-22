@@ -31,7 +31,7 @@
     <img src={vagueTop} alt="" class="vague" aria-hidden="true">
 </div>
 
-<InstagramPost style="background-color: var(--orangeBwhat); margin-top: -1rem;"/>
+<InstagramPost style="background-color: var(--lightOrangeBwhat); margin-top: -1rem;"/>
 
 <style>
     .formulaire{
@@ -50,6 +50,8 @@
         gap: 1rem;
         padding: 2rem;
         margin: auto;
+        
+        box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.36);
     }
 
     h1{

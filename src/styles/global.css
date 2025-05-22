@@ -4,6 +4,7 @@
         --blueBwhat: #82A6F2;
         --lightBlueBwhat: #B4C9F7;
         --orangeBwhat: #F26647;
+        --lightOrangeBwhat: #F7A391;
         --yellowBwhat: #EB9936;
         --pinkBwhat: #FFEDEB;
         --greyBwhat: #44444473;
@@ -25,7 +26,7 @@ html, body {
 }
 
 html{
-  background-color: var(--pinkBwhat);
+  background-color: var(--whiteBwhat);
 }
 
 a {
@@ -59,6 +60,10 @@ ul {
 
 .yellowBwhatSvg{
   filter: brightness(0) saturate(100%) invert(58%) sepia(92%) saturate(348%) hue-rotate(351deg) brightness(93%) contrast(99%);
+}
+
+.whiteBwhatSvg{
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 
 /* Headline */

@@ -1,18 +1,20 @@
 <script>
-
+    import card1 from "$lib/assets/home/FamilleQuiJoue.webp";
+    import card2 from "$lib/assets/home/CoupleQuiFaitDuSport.webp";
+    import card3 from "$lib/assets/home/NageursQuiCelebrentLeurVictoire.webp";
 </script>
 
 <div class="cartesCanvas">
     <div class="carte carte1">
-        <img src="https://picsum.photos/1000/800" alt="">
+        <img src={card1} alt="Une famille s'amuse en faisant une bataille d'oreiller">
         <p class="text text1">Vous reconnecter à vous-même</p>
     </div>
     <div class="carte carte2">
         <p class="text text2">Découvrir, créer, respirer autrement</p>
-        <img src="https://picsum.photos/1000/801" alt="">
+        <img src={card2} alt="Un couple rigole sur un tapis de yoga">
     </div>
     <div class="carte carte3">
-        <img src="https://picsum.photos/1000/802" alt="">
+        <img src={card3} alt="Des nageurs dans un océan célèbrent une victoire">
         <p class="text text3">Sortir de la routine numérique</p>
     </div>
 </div>

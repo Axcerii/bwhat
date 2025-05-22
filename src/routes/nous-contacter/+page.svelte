@@ -44,7 +44,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        background-color: var(--yellowBwhat);
+        background-color: var(--lightOrangeBwhat);
         padding: 4rem 0;
     }
 

@@ -1,11 +1,13 @@
 <script>
-    import banner from "$lib/assets/a-propos/a-propos-background-press.webp";
+    import banner from "$lib/assets/a-propos/banniere.webp";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
     import faqImage from "$lib/assets/a-propos/faq.webp";
+    import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
     
     import IconAPropos from "$lib/components/iconAPropos.svelte";
     import MembreCard from "$lib/components/membreCard.svelte";
     import Faq from "$lib/components/faq.svelte";
+
 </script>
     <svelte:head>
         <title>La mission Bwhat : bien-être, anti-stress & digital detox</title>
@@ -30,7 +32,6 @@
             </div>
         </section>
         <section class="problematique">
-            <img src="https://picsum.photos/1000/1000" alt="" aria-hidden="true">
             <div>
                 <h2>Un projet simple, mais sincère</h2>
                 <p>
@@ -42,7 +43,7 @@
                     <br>Pas parfait, mais porté par l’envie de faire mieux, ensemble.
                 </p>
             </div>
-            <img src="https://picsum.photos/1000/1001" alt="" aria-hidden="true">
+            <img src={photoGroupe} alt="" aria-hidden="true">
         </section>
         <section class="focus">
             <h2>Ce que nous défendons, vraiment</h2>
@@ -147,7 +148,7 @@
 
     .problematique{
         display: flex;
-        width: 97.5%;
+        width: 80%;
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
@@ -155,13 +156,13 @@
     }
 
     .problematique img{
-        width: 15%;
+        width: auto;
         height: 22rem;
         object-fit: cover;
+        border-radius: 20px;
     }
 
     .problematique > div{
-        text-align: center;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -212,7 +213,7 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
-        background-color: var(--orangeBwhat);
+        background-color: var(--lightOrangeBwhat);
         padding-bottom: 8rem;
     }
     .notre-equipe-carousel{
@@ -225,7 +226,7 @@
     }
     
     .faq{
-        background-color: var(--orangeBwhat);
+        background-color: var(--lightOrangeBwhat);
         padding: 4rem 4rem 8rem 4rem;
         display: flex;
         gap: 2rem;
@@ -256,7 +257,7 @@
 
     .maintenant{
         width: 100%;
-        background-color: var(--orangeBwhat);
+        background-color: var(--lightOrangeBwhat);
         text-align: center;
         padding-bottom: 5rem;
     }
@@ -277,7 +278,19 @@
         font-size: 1.2rem;
     }
 
+    @media screen and (max-width: 1024px) {
+        .problematique{
+            flex-direction: column;
+        }
+
+        .problematique > div{
+            width: 80%;
+        }
+    }
+
     @media screen and (max-width: 768px) {
+
+
         .banner-card{
             width: 80%;
         }

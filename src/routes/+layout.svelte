@@ -175,7 +175,7 @@
     }
 
     .special-style{
-        background-color: var(--orangeBwhat);
+        background-color: var(--lightOrangeBwhat);
     }
 
     .special-style img{
@@ -226,6 +226,10 @@
             flex-direction: column;
             gap: 2rem;
             margin-top: 2rem;
+        }
+
+        .special-style{
+            margin-top: 0;
         }
     }
 </style>

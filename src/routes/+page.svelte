@@ -5,9 +5,13 @@
     import BoiteCard from "$lib/components/boiteCard.svelte";
     import TroisCartes from "$lib/components/troisCartes.svelte";
 
-    import bwhatSport from "$lib/assets/bwhat-sport-et-bien-etre.webp";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
     import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
+    
+    /* Images import */
+    
+    import previewBoite from "$lib/assets/home/PreviewBwhatSport.webp";
+    import banner from "$lib/assets/home/Banniere.webp";
 </script>
 
 <svelte:head>
@@ -23,7 +27,7 @@
                 <BoutonLink text="En savoir plus" link="/a-propos"/>
             </div>
         </div>
-        <img src="https://picsum.photos/1920/1080" alt="Visuel d'une boite avec un effet stylisé">
+        <img src={banner} alt="Visuel d'une boite avec un effet stylisé">
     </section>
     
     <section class="avantages">
@@ -36,8 +40,8 @@
     <section class="boites-details">
         <h2>Deux boites, une même envie : prendre soin de vous</h2>
         <div class="boites">
-            <BoiteCard image="sport" title="La box Sport & Bien-être" link="/boites/sport-et-bien-etre"/>
-            <BoiteCard image="decouverte" title="La box Découverte" link="/boites/decouverte"/>
+            <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport"/>
+            <BoiteCard image="BwhatDecouverte" title="La box Découverte" link="/boites/decouverte"/>
         </div>
     </section>
 
@@ -49,18 +53,18 @@
         </h3>
     </section>
 
-    <section class="presentation">
-        <h2>Avec Bwhat, vous recevez chaque mois une boite pleine de bonnes idées pour :</h2>
-        <TroisCartes/>
-    </section>
-
+    <div class="presentation-container">
+        <section class="presentation">
+            <h2>Avec Bwhat, vous recevez chaque mois une boite pleine de bonnes idées pour :</h2>
+            <TroisCartes/>
+        </section>
+    </div>
     
     <section class="vague-container">
-        <img src="{vagueTop}" alt="" aria-hidden="true" class="vague">
+        <img src="{vagueTop}" alt="" aria-hidden="true" class="vague top">
         <div class="notre-histoire">
             <div class="notre-histoire-img-container">
-                <img src="https://picsum.photos/1000/1000" alt="" class="notre-histoire-img" aria-hidden="true">
-                <img src={bwhatSport} alt="" class="histoire-boite-png" aria-hidden="true"> 
+                <img src={previewBoite} alt="" class="notre-histoire-img" aria-hidden="true">
             </div>
             <div class="notre-histoire-titres">
                 <h2>Vous croyez que décrocher des écrans est impossible ?</h2>
@@ -99,7 +103,7 @@
 
     .banner{
         width: 100%;
-        height: 37.5rem;
+        height: 40rem;
         position: relative;
     }
 
@@ -123,6 +127,8 @@
 
     .sous-titre{
         font-family: var(--sansFont);
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 
     .banner-button-container{
@@ -170,6 +176,11 @@
         font-weight: bold;
     }
 
+    .presentation-container{
+        background-color: #F2F2F2;
+        padding: 8rem 0 0 0;
+    }
+
     .presentation{
         display: flex;
         margin: 3rem auto 3rem 10%;
@@ -208,13 +219,6 @@
         object-fit: cover;
     }
 
-    .histoire-boite-png{
-        position: absolute;
-        bottom: -50%;
-        left: -30%;
-        width: 30rem;
-    }
-
     .notre-histoire-titres{
         width: 50%;
         display: flex;
@@ -222,6 +226,12 @@
         gap: 2rem;
         padding: 2rem auto;
         justify-content: space-between;
+    }
+
+    .notre-histoire-titres > p{
+        font-family: var(--sansFont);
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
     .notre-histoire-titres > div{
@@ -232,16 +242,21 @@
     .vague-container{
         width: 100%;
         position: relative;
-        background-color: var(--orangeBwhat);
+        background-color: var(--lightOrangeBwhat);
     }
 
     .vague{
         width: 100%;
         pointer-events: none;
-        background-color: var(--pinkBwhat);
+        background-color: var(--whiteBwhat);
     }
 
     .bottom{
+        margin-top: -8rem;
+    }
+
+    .top{
+        background-color: #F2F2F2;
         margin-top: -8rem;
     }
 

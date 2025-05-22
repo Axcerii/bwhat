@@ -8,7 +8,7 @@
         <div>
             <h3>{title}</h3>
             <div class="boite-card-button-container">
-                <BoutonLink text="Voir plus" link={link}/>
+                <BoutonLink text="Voir plus" link={link} color="var(--blackBwhat)"/>
             </div>
         </div>
     </div>
@@ -20,13 +20,13 @@
         padding: 2rem;
         border-radius: 25px;
         gap: 1rem;
-        background-color: var(--blueBwhat);
+        background-color: var(--lightOrangeBwhat);
         width: 100%;
     }
 
     img{
         width: 100%;
-        min-height: 17rem;
+        max-height: 17rem;
         border-radius: 25px;
         object-fit: cover;
         border-radius: 25px;

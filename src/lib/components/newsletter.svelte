@@ -1,11 +1,12 @@
 <script>
     import BoutonSubmit from "$lib/components/boutonSubmit.svelte";
+    import Pattern from "$lib/assets/home/BwhatPattern.webp";
 </script>
 
     <div class="container">
         <form aria-label="Newsletter" action="#">
             <h2>Restez connectés à l'essentiel !</h2>
-            <img src="https://picsum.photos/1200/600" alt="Visuel de la newsletter"/>
+            <img src={Pattern} alt="" aria-hidden="true"/>
             <input type="text" placeholder="Entrez votre e-mail">
             
             <div class="newsletter-button-container">
