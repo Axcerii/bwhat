@@ -1,57 +1,53 @@
 <script>
-    let { imageProduct, imageCategorie, titre, position=false, alt, productX = '0', productY = '0' } = $props();
+    let { imageProduct, titre, alt, bgColor = "#ffffff", pColor = "#000000"} = $props();
 
-    let textAlign , rightLeft, justifyContent;
-
-    if(position){
-        textAlign = "left";
-        rightLeft = `right: ${productX}`;
-        justifyContent = "flex-start;";
-    }
-    else{
-        textAlign = "right";
-        rightLeft = `left: ${productX}`;
-        justifyContent = "flex-end";
-    }
-
-    let imgStyle = `${rightLeft}; top: ${productY};`;
-    let pStyle = `text-align: ${textAlign};`;
-    let divStyle = `background-image: url('/produits/${imageCategorie}.webp'); justify-content: ${justifyContent};`;
-
+    let pStyle = `color: ${pColor};`;
+    let divStyle = `background-color: ${bgColor};`;
 </script>
 
-<div style={divStyle}>
-    <img src="/produits/{imageProduct}.webp" alt={alt} style={imgStyle}>
-    <p style={pStyle}>{titre}</p> 
+<div class="produit">
+    <div style={divStyle}>
+        <p style={pStyle}>{titre}</p> 
+    </div>
+    <img src="/produits/{imageProduct}.webp" alt={alt}>
 </div>
 
 <style>
-    div{
+    .produit{
         display: flex;
-        height: 4rem;
         width: 100%;
         position: relative;
         background-size: cover;
         background-position: center;
+        border-radius: 5px;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .produit > div{
+        width: 100%;
+        height: 6rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
     }
     
     p{
+        width: 80%;
         font-family: var(--sansFont);
         font-weight: bold;
-        margin: auto 1rem;
-        max-width: 70%;
         font-size: 1.2rem;
-        background-color: #ffffffcc;
-        padding: 0.5rem;
-        border-radius: 5px;
+        margin: auto;
     }
 
-    div>img{
-        position: absolute;
+    .produit>img{
         height: 6rem;
         width: auto;
-        top: 50%;
-        transform: translateY(-50%);
-        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .produit>img:hover{
+        transform: scale(1.2);
+        cursor: help;
     }
 </style>

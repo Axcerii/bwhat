@@ -185,10 +185,13 @@
     @media screen and (max-width: 1024px) {
         .menu-burger{
             display: block;
+            position: absolute;
+            right: 0;
         }
 
         header{
             border-top: none;
+            min-height: 6rem;
         }
 
         .header-logo{
@@ -199,6 +202,10 @@
 
         nav{
             flex-direction: column;
+        }
+        
+        nav > ul{
+            padding-top: 2rem;
         }
 
         .menu-top{

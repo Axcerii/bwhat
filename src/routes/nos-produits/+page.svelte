@@ -1,9 +1,14 @@
  <script>
-    import boiteSport from "$lib/assets/produits/sport.webp";
-    import boiteDecouverte from "$lib/assets/produits/decouverte.webp";
-
     import BoutonLink from "$lib/components/boutonLink.svelte";
     import ProduitCategorie from "$lib/components/produitCategorie.svelte";
+
+    import banner from "$lib/assets/nos-produits/banniere-produits.webp";    
+    let bannerUrl = "background-image: url('"+banner+"')";
+
+    import boiteDecouverte from "$lib/assets/nos-produits/box-decouverte.webp";
+    import boiteSport from "$lib/assets/nos-produits/box-sport-bien-etre.webp"
+
+    import Newsletter from "$lib/components/newsletter.svelte";
  </script>
 
  <svelte:head>
@@ -16,123 +21,125 @@
  </svelte:head>
 
  <main>
-    <section class="banner" style="background-image: url('https://picsum.photos/1920/1080')">
-
+    <section class="banner" style={bannerUrl}>
+        <div class="banner-titres">
+            <h1 style="display: none">Nos produits</h1>
+            <h2>À vous de les choisir !</h2>
+            <h3>Retrouvez goût au plaisir de la déconnexion</h3>
+        </div>
     </section>
+
     <section class="produits sportEtBienEtre">
-        <h1>Nos produits</h1>
-        <h2>À vous de les choisir !</h2>
         <div>
-            <h2>Box sport & bien être</h2>
-            <p>Pour celles et ceux qui souhaitent éveiller leur <strong>curiosité</strong> et s’offrir une dose de nouveauté chaque mois.</p>
-            <h3>Elle contient&nbsp;:</h3>
             <div class="produits-contenu-container">
                 <div class="produits-card">
+                    <h2>Box sport & bien être</h2>
                     <img src={boiteSport} alt="Aperçu de la boite sport & découverte">
+                    <p>Pour celles et ceux qui souhaitent éveiller leur <strong>curiosité</strong> et s’offrir une dose de nouveauté chaque mois.</p>
                     <div class="produits-card-button">
                         <BoutonLink color="var(--blackBwhat)" text="Accéder à cette boîte" link="/boites/sport-et-bien-etre"/>
                     </div>
                 </div>
                 <div class="produits-contenu">
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonPeanutButter"
                         titre="Une recette cartonnée + 1 échantillon"
-                        alt="Elite Toddler"
-                        productX="-1rem"
-                        productY="-1rem"
+                        alt="Pot de Beurre de Cacahuète"
+                        bgColor="var(--blueBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonServiette"
                         titre="Un équipement d'entraînement"
-                        alt="Elite Toddler"
-                        productX="-2rem"
+                        alt="Serviette de Sport"
+                        bgColor="var(--blueBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonCordeASauter"
                         titre="Un accessoire de sport"
-                        alt="Elite Toddler"
-                        productX="-1.5rem"
-                        productY="-1rem"
+                        alt="Corde à sauter"
+                        bgColor="var(--blueBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonRouleauDePeau"
                         titre="Un produit bien-être"
-                        alt="Elite Toddler"
-                        productX="4rem"
-                    />
-                    <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
-                        titre="Un abonnement à la salle de sport"
-                        alt="Elite Toddler"
-                        productY="-1rem"
+                        alt="Rouleau pour la peau"
+                        bgColor="var(--blueBwhat)"
                     />
                 </div>
             </div>
         </div>
         <!-- Bwhat découverte -->
         <div id="decouverte">
-            <h2>Box découverte</h2>
-            <p>Pour celles et ceux qui veulent bouger, respirer, <strong>se reconnecter à leur corps.</strong></p>
-            <h3>Elle contient&nbsp;:</h3>
             <div class="produits-contenu-container secondeBoite">
                 <div class="produits-card">
+                    <h2>Box découverte</h2>
                     <img src={boiteDecouverte} alt="Aperçu de la boite découverte">
+                    <p>Pour celles et ceux qui veulent bouger, respirer, <strong>se reconnecter à leur corps.</strong></p>
                     <div class="produits-card-button">
                         <BoutonLink color="var(--blackBwhat)" text="Accéder à cette boîte" link="/boites/decouverte"/>
                     </div>
                 </div>
                 <div class="produits-contenu">
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonConfiture"
                         titre="Une recette cartonnée + 1 échantillon"
-                        alt="Elite Toddler"
-                        position={true}
-                        productX="1rem"
-                        productY="-1rem"
+                        alt="Pot de confiture de fruits"
+                        pColor="var(--whiteBwhat)"
+                        bgColor="var(--orangeBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonArgile"
                         titre="Une activité manuelle"
-                        alt="Elite Toddler"
-                        position={true}
-                        productX="2rem"
+                        alt="Bloc d'argile pour la sculture"
+                        pColor="var(--whiteBwhat)"
+                        bgColor="var(--orangeBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonThe"
                         titre="Un produit bien être"
-                        alt="Elite Toddler"
-                        position={true}
-                        productX="1.5rem"
-                        productY="-1rem"
+                        alt="Sachet de Thé Artisanal"
+                        pColor="var(--whiteBwhat)"
+                        bgColor="var(--orangeBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonMoutarde"
                         titre="Un produit artisanal"
-                        alt="Elite Toddler"
-                        position={true}
-                        productX="4rem"
+                        alt="Pot de moutarde artisanale"
+                        pColor="var(--whiteBwhat)"
+                        bgColor="var(--orangeBwhat)"
                     />
                     <ProduitCategorie 
-                        imageProduct="placetoddler"
-                        imageCategorie="categorie"
+                        imageProduct="echantillonCasseTete"
                         titre="Un jeu ou un casse tête"
-                        alt="Elite Toddler"
-                        position={true}
-                        productY="-1rem"
+                        alt="Casse-tête en bois"
+                        pColor="var(--whiteBwhat)"
+                        bgColor="var(--orangeBwhat)"
                     />
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="offres">
+        <div class="offres-titres">
+            <h2>Nos offres d'abonnements</h2>
+            <p>Chez Bwhat, on vous encourage à avancer à votre rythme. C’est pourquoi nous proposons <strong>trois formules d’abonnement.</strong></p>
+        </div>
+        <div class="offres-prix">
+            <div>
+                <h3>3 mois <br> 39€/mois</h3>
+            </div>
+            <div>
+                <div class="populaire">Populaire</div>
+                <h3>6 mois <br> 37€/mois</h3>
+            </div>
+            <div>
+                <h3>12 mois <br> 35€/mois</h3>
+            </div>
+        </div>
+    </section>
+
+    <Newsletter/>
  </main>
 
  <style>
@@ -147,36 +154,42 @@
 
     .banner{
         width: 100%;
-        height: 32.5rem;
+        height: 40rem;
         position: relative;
         background-size: cover;
         background-position: center;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .banner h3{
+        font-family: var(--sansFont);
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .banner-titres{
+        width: 30%;
+        margin: auto 2rem;
+        text-align: left;
+    }
+
+    .banner > *{
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.36);
     }
 
     .produits{
         display: flex;
         flex-direction: column;
-        background-color: var(--yellowBwhat);
         padding: 4rem 0;
         gap: 6rem;
     }
 
-    .produits h1{
-        text-align: center;
-    }
-
-    .produits > h2{
-        text-align: left;
-        position: relative;
-        width: auto;
-        max-width: 100%;
-        z-index: 1;
-        margin: auto 2rem;
-    }
     .produits-card{
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 50%;
         position: relative;
         gap: 2rem;
     }
@@ -188,7 +201,7 @@
     .produits-card img{
         width: 100%;
         border-radius: 25px;
-        height: 40vw;
+        height: 30rem;
         object-fit: cover;
     }
 
@@ -200,75 +213,106 @@
         position: relative;
     }
 
-    .produits > div > h2{
-        text-align: right;
-        margin: auto 2rem;
-        font-family: var(--sansFont);
+    .produits-card > h2{
         text-transform: uppercase;
     }
 
-    .produits > div > p{
-        width: 30rem;
+    .produits-card > p{
         font-size: 2rem;
-        position: absolute;
         top: 30%;
         left: 10%;
         z-index: 2;
+        font-family: var(--sansFont);
     }
 
-
-    
     .produits-contenu-container{
-        width: 100%;
+        width: 90%;
+        margin: auto;
         display: flex;
         gap: 6rem;
         position: relative;
         flex-wrap: wrap;
-        justify-content: end;}
+    }
 
 
     .produits-contenu{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 30%;
+        width: 40%;
         justify-content: center;
     }
 
-    .produits > div > h3{
-        text-align: right;
-        font-size: 3rem;
-        margin: auto 2rem;
+    .offres{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 6rem 0;
+        background-color: #f2f2f2;
+        gap: 4rem;
     }
 
-    #decouverte > h3{
-        text-align: left;
+    .offres-titres{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        
     }
 
-    #decouverte > h2{
-        text-align: left;
+    .offres-titres> p{
+        font-family: var(--sansFont);
+        margin-top: 1rem;
     }
 
-    #decouverte > p{
-        left: auto;
-        right: 10%;
+    .offres-prix{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        margin: auto;
+        justify-content: space-between;
     }
-    .secondeBoite{
-        flex-direction: row-reverse;
-        justify-content: start;
+
+    .offres-prix > div{
+        width: 18rem;
+        height: 18rem;
+        background-color: var(--blackBwhat);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--whiteBwhat);
+        font-family: var(--sansFont);
+        text-align: center;
+        font-size: 1.5rem;
+        position: relative;
+        gap: 2rem;
+    }
+
+
+    .populaire{
+        background-color: var(--lightOrangeBwhat);
+        text-transform: uppercase;
+        width: 90%;
+        border-radius: 5px;
+        color: black;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 0.5rem 0;
     }
 
 
     @media screen and (max-width: 1024px){
-        h2{
-            width: 100%;
-            text-align: center!important;
-            margin: auto!important;
+        .offres-prix > div{
+            width: 10rem;
+            height: 10rem;
+            font-size: 1rem;
         }
-        
 
-        h3{
-            text-align: left!important;
+        .banner-titres{
+            width: 50%;
         }
 
         .produits{
@@ -292,10 +336,26 @@
             margin: auto;
         }
 
-        .produits > div > p{
+        .produits-card > p{
             position: static;
             width: 90%;
             margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .offres-prix{
+            width: 90%;
+        }
+
+        .offres-prix > div{
+            width: 6.5rem;
+            height: 6.5rem;
+            font-size: 1rem;
+        }
+
+        .populaire{
+            top: -15%;
         }
     }
  </style>

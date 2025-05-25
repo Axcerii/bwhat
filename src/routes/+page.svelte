@@ -40,7 +40,7 @@
     <section class="boites-details">
         <h2>Deux boites, une même envie : prendre soin de vous</h2>
         <div class="boites">
-            <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport"/>
+            <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport-et-bien-etre"/>
             <BoiteCard image="BwhatDecouverte" title="La box Découverte" link="/boites/decouverte"/>
         </div>
     </section>
@@ -123,6 +123,10 @@
         padding: 5rem 0 5rem 5rem;
         width: 30rem;
         gap: 1rem;
+    }
+
+    .banner > div > *{
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.36);
     }
 
     .sous-titre{
@@ -307,10 +311,6 @@
         .notre-histoire-titres{
             width: 100%;
             padding: 2rem;
-        }
-
-        .histoire-boite-png{
-            display: none;
         }
     }
 </style>

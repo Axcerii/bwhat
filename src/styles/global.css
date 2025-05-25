@@ -66,6 +66,10 @@ ul {
   filter: brightness(0) saturate(100%) invert(100%);
 }
 
+.lightBlueBwhatSvg{
+   filter: brightness(0) saturate(100%) invert(79%) sepia(22%) saturate(758%) hue-rotate(192deg) brightness(97%) contrast(99%);
+}
+
 /* Headline */
 
 h1{

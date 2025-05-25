@@ -5,7 +5,7 @@
 
     <div class="container">
         <form aria-label="Newsletter" action="#">
-            <h2>Restez connectés à l'essentiel !</h2>
+            <h2>Restez connectés à l'essentiel&nbsp;!</h2>
             <img src={Pattern} alt="" aria-hidden="true"/>
             <input type="text" placeholder="Entrez votre e-mail">
             
@@ -32,7 +32,7 @@
     input{
         font-size: 1.5rem;
         background-color: var(--whiteBwhat);
-        border: none;
+        border: solid 4px var(--orangeBwhat);
         border-radius: 10px;
         padding: 1rem;
         font-family: var(--serifFont);
