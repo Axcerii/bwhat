@@ -99,7 +99,7 @@
         <li><a href="/a-propos">À propos</a></li>
         <li><a href="/nos-produits">Nos produits</a></li>
         <li><a href="/nous-contacter">Contact</a></li>
-        <li><a href="/creer-un-compte">S'incrire</a></li>
+        <li><a href="/creer-un-compte">S'inscrire</a></li>
         <li><a href="/se-connecter">Se connecter</a></li>
         <li><a href="/mentions-legales">Mentions légales</a></li>
     </ul>
