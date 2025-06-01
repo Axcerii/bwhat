@@ -2,6 +2,7 @@
     import InstagramPost from "$lib/components/instagramPost.svelte";
     import BoutonSubmit from "$lib/components/boutonSubmit.svelte";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
+    import { page } from '$app/state';
 </script>
 
 <svelte:head>
@@ -10,20 +11,27 @@
 </svelte:head>
 
 <section class="formulaire">
-    <h1>Votre moment déconnexion</h1>
+    <h1>Votre moment déconnexion <br> commence maintenant !</h1>
 
-    <form action="">
+    <form method="POST">
         <h2>Connectez-vous !</h2>
         <h3>Connectez-vous pour accéder à votre espace client</h3>
         <label for="email">E-mail :</label>
         <input type="email" name="email" placeholder="Votre e-mail">
         <label for="password">Mot de Passe :</label>
         <input type="password" name="password" placeholder="Mot de Passe">
+        
+        <!-- Affichage de l'erreur -->
+        {#if page.form?.error}
+            <div class="error">
+                {page.form.error}
+            </div>
+        {/if}
 
         <div class="submit-container">
             <BoutonSubmit text="Se connecter" color="var(--orangeBwhat)"/>
         </div>
-        <p class="indication">Vous n'êtes pas encore inscrit ? <a href="/connexion">Inscrivez-vous !</a></p>
+        <p class="indication">Vous n'avez pas encore de compte ? <a href="/creer-un-compte">Inscrivez-vous !</a></p>
     </form>
 </section>
 
@@ -34,6 +42,14 @@
 <InstagramPost style="background-color: var(--lightOrangeBwhat); margin-top: -1rem;"/>
 
 <style>
+    .error{
+        color: rgb(86, 3, 3);
+        background-color: rgb(255, 144, 144);
+        border: 2px solid red;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
     .formulaire{
         display: flex;
         flex-direction: column;

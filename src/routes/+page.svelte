@@ -41,7 +41,7 @@
         <h2>Deux boites, une même envie : prendre soin de vous</h2>
         <div class="boites">
             <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport-et-bien-etre"/>
-            <BoiteCard image="BwhatDecouverte" title="La box Découverte" link="/boites/decouverte"/>
+            <BoiteCard image="BwhatDecouverte" title="La box Activités Manuelles et Découverte" link="/boites/activites-manuelles-et-decouverte"/>
         </div>
     </section>
 

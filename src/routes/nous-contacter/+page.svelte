@@ -1,6 +1,28 @@
-<script>
+<script lang="ts">
     import BoutonSubmit from "$lib/components/boutonSubmit.svelte";
     import vagueBottom from "$lib/assets/structure/ContactBgBottom.svg"
+
+    let name = '';
+    let surname = '';
+	let email = '';
+	let message = '';
+	let status = '';
+
+	async function handleSubmit(event: Event) {
+		event.preventDefault();
+		const res = await fetch('/contact', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ name, surname, email, message })
+		});
+
+		if (res.ok) {
+			status = 'Message envoyé avec succès!';
+			name = email = message = '';
+		} else {
+			status = 'Erreur lors de l’envoi du message.';
+		}
+	}
 </script>
 
 <svelte:head>
@@ -15,7 +37,7 @@
             Contactez nous !
         </h1>
         
-        <form action="">
+        <form on:submit|preventDefault={handleSubmit}>
             <h2>
                 Besoin d'échanger avec nous ?
             </h2>
@@ -24,14 +46,15 @@
             </h3>
         
             <div class="nomPrenom">
-                <input type="text" name="name" placeholder="Votre prénom">
-                <input type="text" name="surname" placeholder="Votre nom">
+                <input type="text" name="name" placeholder="Votre prénom" bind:value={name}>
+                <input type="text" name="surname" placeholder="Votre nom" bind:value={surname}>
             </div>
-            <input type="email" name="email" placeholder="Votre e-mail">
-            <textarea name="message" id="message" placeholder="Votre message"></textarea>
+            <input type="email" name="email" placeholder="Votre e-mail" bind:value={email}>
+            <textarea name="message" id="message" placeholder="Votre message" bind:value={message}></textarea>
             <div class="submit-container">
                 <BoutonSubmit text="Envoyer"/>
             </div> 
+            <p>{status}</p>
         </form>
     </div>
     <div class="vague-container">

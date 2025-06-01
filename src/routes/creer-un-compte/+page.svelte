@@ -2,6 +2,8 @@
     import InstagramPost from "$lib/components/instagramPost.svelte";
     import BoutonSubmit from "$lib/components/boutonSubmit.svelte";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
+    import { page } from '$app/state';
+
 </script>
 
 <svelte:head>
@@ -10,22 +12,32 @@
 </svelte:head>
 
     <section class="formulaire">
-        <h1>Votre moment déconnexion</h1>
+        <h1>Votre moment déconnexion <br> commence maintenant !</h1>
 
-        <form action="">
+        <form method="POST">
             <h2>Inscrivez-vous !</h2>
             <h3>Inscrivez-vous pour créer votre espace détente</h3>
             <label for="email">E-mail :</label>
-            <input type="email" name="email" placeholder="Votre e-mail">
-            <label for="password">Mot de Passe :</label>
+            <input type="email" name="email" placeholder="Votre e-mail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+            <label for="password">Mot de Passe  <span class="tooltip"> (i)
+                <p class="tooltip-indication">Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère special.</p>
+            </span> :</label>
             <input type="password" name="password" placeholder="Mot de Passe">
             <label for="confirmPassword">Confirmer votre mot de passe :</label>
             <input type="password" name="confirmPassword" placeholder="Confirmez votre mot de passe">
 
+                <!-- Affichage de l'erreur -->
+                {#if page.form?.error}
+                    <div class="error">
+                        {page.form.error}
+                    </div>
+                {/if}
+
+
             <div class="submit-container">
                 <BoutonSubmit text="S'inscrire" color="var(--orangeBwhat)"/>
             </div>
-            <p class="indication">Vous avez déjà un compte ? <a href="/connexion">Connectez-vous !</a></p>
+            <p class="indication">Vous avez déjà un compte ? <a href="/se-connecter">Connectez-vous !</a></p>
         </form>
     </section>
 
@@ -36,6 +48,38 @@
     <InstagramPost style="background-color: var(--lightOrangeBwhat); margin-top: -1rem;"/>
 
     <style>
+        .error{
+            color: rgb(86, 3, 3);
+            background-color: rgb(255, 144, 144);
+            border: 2px solid red;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .tooltip-indication{
+            opacity: 0;
+            font-size: 0.8rem;
+            background-color: var(--whiteBwhat);
+            box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.36);
+            border-radius: 10px;
+            padding: 1rem;
+            width: 10rem;
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+        }
+
+        .tooltip:hover .tooltip-indication{
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .tooltip{
+            position: relative;
+            cursor: help;
+        }
+        
+    
         .formulaire{
             display: flex;
             flex-direction: column;

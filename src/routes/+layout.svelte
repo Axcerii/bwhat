@@ -9,6 +9,9 @@
     import tiktok from "$lib/assets/social/tiktok.svg"
 	import { slide } from "svelte/transition";
     import { derived } from "svelte/store";
+    import { onMount } from "svelte";
+    import { afterNavigate } from '$app/navigation';
+
 
     let menu = $state("/menu.svg");
     
@@ -21,9 +24,42 @@
 
     const specialFooter = derived(page, ($page) => $page.url.pathname === '/se-connecter' || $page.url.pathname === '/creer-un-compte');
 
+    const user = $page.data.user;
 
+    // Matomo
 
+    onMount(() => {
+    //@ts-ignore
+      const _paq = (window._paq = window._paq || []);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      _paq.push(['setTrackerUrl', 'https://TON_DOMAINE_MATOMO/matomo.php']);
+      _paq.push(['setSiteId', '1']);
+
+      const u = 'https://bwhat.matomo.cloud/';
+      const d = document;
+      const g = d.createElement('script');
+      const s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.src = u + 'matomo.js';
+      // @ts-ignore
+      s.parentNode.insertBefore(g, s);
+    })
+
+    afterNavigate(() => {
+    //@ts-ignore
+    if (typeof window !== 'undefined' && window._paq) {
+    //@ts-ignore
+        window._paq.push(['setCustomUrl', window.location.href]);
+    //@ts-ignore
+        window._paq.push(['setDocumentTitle', document.title]);
+    //@ts-ignore
+        window._paq.push(['trackPageView']);
+        }
+    });
 </script>
+
 <header>
     <nav>
         <div class="top-menu-responsive">
@@ -35,12 +71,19 @@
                 <img alt="logo de Bwhat" src={logo} width="150" class="blueBwhatSvg"/>
             </a>
         </div>
-        <ul class="menu-top" class:open={isOpen} transition:slide>
+        <ul class="menu-top" class:open={isOpen} transition:slide data-sveltekit-reload>
             <li><a href="/a-propos">À propos</a></li>
             <li><a href="/nos-produits">Nos produits</a></li>
             <li><a href="/nous-contacter">Contact</a></li>
-            <li><a href="/creer-un-compte">S'incrire</a></li>
+        {#if !user}
             <li><a href="/se-connecter">Se connecter</a></li>
+            <li><a href="/creer-un-compte">S'incrire</a></li>
+        {/if}
+
+        {#if user}
+            <li><a href="/mon-compte">Mon compte</a></li>
+            <li><a href="/se-deconnecter">Se déconnecter</a></li>
+        {/if}
         </ul>
     </nav>
 </header>
@@ -106,17 +149,18 @@
         margin: auto 0;
         font-size: 1.2rem;
     }
+
     .menu-top li{
         font-weight: bold;
         text-transform: uppercase;
         font-family: var(--sansFont);
     }
 
-    .menu-top a:hover{
+    .menu-top a:hover, button:hover{
         transition: all 100ms ease-in-out;
     }
 
-    .menu-top a:hover{
+    .menu-top a:hover, button:hover{
         color: var(--blueBwhat);
     }
 

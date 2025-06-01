@@ -13,6 +13,8 @@
 
  <svelte:head>
      <title>Nos produits anti-stress et déconnexion - Bwhat</title>
+     <meta name="description" content="Découvrez nos différents produits. Une box contenant des produits idéal pour éveiller la créativité et une autre contenant des produits pour les curieux, elle vous pousse à sortir de votre zone de confort en explorant des univers inconnus.">
+
      <style>
         html{
             overflow-x: hidden;
@@ -35,7 +37,7 @@
                 <div class="produits-card">
                     <h2>Box sport & bien être</h2>
                     <img src={boiteSport} alt="Aperçu de la boite sport & découverte">
-                    <p>Pour celles et ceux qui souhaitent éveiller leur <strong>curiosité</strong> et s’offrir une dose de nouveauté chaque mois.</p>
+                    <p>Pour celles et ceux qui veulent bouger, respirer, <strong>se reconnecter à leur corps.</strong></p>
                     <div class="produits-card-button">
                         <BoutonLink color="var(--blackBwhat)" text="Accéder à cette boîte" link="/boites/sport-et-bien-etre"/>
                     </div>
@@ -72,11 +74,12 @@
         <div id="decouverte">
             <div class="produits-contenu-container secondeBoite">
                 <div class="produits-card">
-                    <h2>Box découverte</h2>
-                    <img src={boiteDecouverte} alt="Aperçu de la boite découverte">
-                    <p>Pour celles et ceux qui veulent bouger, respirer, <strong>se reconnecter à leur corps.</strong></p>
+                    <h2>Box activités manuelles et découverte</h2>
+                    <img src={boiteDecouverte} alt="Aperçu de la boite activités manuelles et découverte">
+                    <p>
+                    Pour celles et ceux qui souhaitent éveiller leur <strong>curiosité</strong> et s’offrir une dose de nouveauté chaque mois.</p>
                     <div class="produits-card-button">
-                        <BoutonLink color="var(--blackBwhat)" text="Accéder à cette boîte" link="/boites/decouverte"/>
+                        <BoutonLink color="var(--blackBwhat)" text="Accéder à cette boîte" link="/boites/activites-manuelles-et-decouverte"/>
                     </div>
                 </div>
                 <div class="produits-contenu">

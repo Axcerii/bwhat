@@ -182,6 +182,7 @@
         gap: 2rem;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .focus > div{
@@ -286,11 +287,14 @@
         .problematique > div{
             width: 80%;
         }
+
+        .problematique img{
+            width: 100%;
+            height: auto;
+        }
     }
 
     @media screen and (max-width: 768px) {
-
-
         .banner-card{
             width: 80%;
         }

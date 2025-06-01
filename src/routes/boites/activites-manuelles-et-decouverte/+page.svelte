@@ -25,11 +25,16 @@ function updatePrice(index: number) {
 
 </script>
 
+<svelte:head>
+    <title>Boîte activités manuelles et découverte - Bwhat</title>
+    <meta name="description" content="Pensée pour les curieux, elle vous pousse à sortir de votre zone de confort en explorant des univers inconnus.">
+</svelte:head>
+
 <main>
     <section class="abonnement">
-        <img src={Preview} alt="Boite de la boite découverte avec des exemples de produits. Des huiles essentielles, des crèmes, de la confiture artisanale et des pelotes de laines.">
+        <img src={Preview} alt="Boite de la box activités manuelles et découvertes avec des exemples de produits. Des huiles essentielles, des crèmes, de la confiture artisanale et des pelotes de laines.">
         <div class="abonnement-infos">
-            <h1>Box Découverte</h1>
+            <h1>Box activités manuelles et découvertes</h1>
             <h2>Pensée pour les curieux, elle vous pousse à sortir de votre zone de confort en
             explorant des univers inconnus.</h2>
             <h2 class="price">{price}€</h2>
@@ -50,6 +55,7 @@ function updatePrice(index: number) {
 
             <form action="">
                 <input type="hidden" name="Abonnement" value="3mois">
+                <input type="hidden" name="BoiteId" value="2">
                 <BoutonSubmit text="S'abonner" color="var(--blackBwhat)"/>
             </form>
             <hr />

@@ -2,7 +2,7 @@
     let {color="var(--blackBwhat)", text} = $props();
 </script>
 
-<button style="background-color: {color}">{text}</button>
+<button style="background-color: {color}" type="submit">{text}</button>
 
 
 <style>
