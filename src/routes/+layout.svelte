@@ -77,7 +77,7 @@
             <li><a href="/nous-contacter">Contact</a></li>
         {#if !user}
             <li><a href="/se-connecter">Se connecter</a></li>
-            <li><a href="/creer-un-compte">S'incrire</a></li>
+            <li><a href="/creer-un-compte">S'inscrire</a></li>
         {/if}
 
         {#if user}

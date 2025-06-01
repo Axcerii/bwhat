@@ -47,7 +47,7 @@
             <input type="email" name="email" id="email" value="{user.email}" readonly>
             <a href="/editer-profil">modifier</a>
         </div>
-        <p>Voulez-vous changer de mot de passe ? C'est ici : <a href="/editer-profil">changer mon mot de passe</a></p>
+        <p style="display: none">Voulez-vous changer de mot de passe ? C'est ici : <a href="/editer-profil">changer mon mot de passe</a></p>
     </section>
 
     <section class="adresses">
