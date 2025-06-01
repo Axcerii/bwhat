@@ -1,7 +1,7 @@
 <script>
-    import card1 from "$lib/assets/home/FamilleQuiJoue.webp";
-    import card2 from "$lib/assets/home/CoupleQuiFaitDuSport.webp";
-    import card3 from "$lib/assets/home/NageursQuiCelebrentLeurVictoire.webp";
+    import card1 from "$lib/assets/home/HommeCuisine.webp";
+    import card2 from "$lib/assets/home/FemmeMeditation.webp";
+    import card3 from "$lib/assets/home/TroisPersonnesPoteries.webp";
 </script>
 
 <div class="cartesCanvas">

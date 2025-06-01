@@ -29,35 +29,20 @@
     // Matomo
 
     onMount(() => {
-    //@ts-ignore
-      const _paq = (window._paq = window._paq || []);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      _paq.push(['setTrackerUrl', 'https://TON_DOMAINE_MATOMO/matomo.php']);
-      _paq.push(['setSiteId', '1']);
-
-      const u = 'https://bwhat.matomo.cloud/';
-      const d = document;
-      const g = d.createElement('script');
-      const s = d.getElementsByTagName('script')[0];
-      g.type = 'text/javascript';
-      g.async = true;
-      g.src = u + 'matomo.js';
-      // @ts-ignore
-      s.parentNode.insertBefore(g, s);
+        const script = document.createElement('script');
+        script.async = true;
+        script.text = "var _paq = window._paq = window._paq || [];" +
+  "/* tracker methods like \"setCustomDimension\" should be called before \"trackPageView\" */" +
+  "_paq.push(['trackPageView']);" +
+  "_paq.push(['enableLinkTracking']);" +
+  "(function() {" +
+  "var u=\"https://bwhat.matomo.cloud/\";" +
+  "_paq.push(['setTrackerUrl', u+'matomo.php']);" +
+  "_paq.push(['setSiteId', '1']);" +
+  "var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];" +
+  "g.async=true; g.src='https://cdn.matomo.cloud/bwhat.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);";
+        document.body.appendChild(script);
     })
-
-    afterNavigate(() => {
-    //@ts-ignore
-    if (typeof window !== 'undefined' && window._paq) {
-    //@ts-ignore
-        window._paq.push(['setCustomUrl', window.location.href]);
-    //@ts-ignore
-        window._paq.push(['setDocumentTitle', document.title]);
-    //@ts-ignore
-        window._paq.push(['trackPageView']);
-        }
-    });
 </script>
 
 <header>
