@@ -101,7 +101,7 @@ model Order {
   userId     Int
   boxId      Int
   addressId  Int
-  status     OrderStatus @default(UNPAYED)
+  status     OrderStatus @default(PENDING)
   price      Float
   orderedAt  DateTime  @default(now())
 
@@ -116,7 +116,6 @@ model Order {
 }
 
 enum OrderStatus {
-  UNPAYED
   PENDING
   SHIPPED
   DELIVERED
