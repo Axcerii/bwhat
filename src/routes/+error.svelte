@@ -1,4 +1,6 @@
 <script>
+    import { page } from '$app/state';
+
     import pattern from "$lib/assets/nos-produits/pattern-decouverte.webp";
     let background = "background-image: url('"+pattern+"')";
 
@@ -32,10 +34,13 @@
         <h1>
             ERROR
             <span class="orange">
-                404
-            </span>    
+                {page.status??404}
+            </span>
         </h1>
         <h2>
+
+            {page.error?.message + "."}
+            <br>
             Heureusement, nos box sont bien plus remplies
         </h2>
         <h3>Le saviez vous ? <br> <br> {anecdote}</h3>
@@ -45,7 +50,8 @@
 <style>
 
 main{
-    height: 60vh;
+    height: auto;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     margin: auto;
