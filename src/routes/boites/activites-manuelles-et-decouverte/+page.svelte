@@ -10,17 +10,19 @@ import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
 let bgProduits = "background-image: url('"+Pattern+"')";
 
 let price = 39;
+let selectedDuration = "3mois";
 let selectedIndex = 0;
 
 const abonnements = [
-    { duration: "3 mois", price: 39 },
-    { duration: "6 mois", price: 37 },
-    { duration: "12 mois", price: 35 }
+    { duration: "3mois", price: 39 },
+    { duration: "6mois", price: 37 },
+    { duration: "12mois", price: 35 }
 ];
 
 function updatePrice(index: number) {
     selectedIndex = index;
     price = abonnements[index].price;
+    selectedDuration = abonnements[index].duration;
 }
 
 </script>
@@ -53,8 +55,9 @@ function updatePrice(index: number) {
                 </div>
             </div>
 
-            <form action="">
-                <input type="hidden" name="Abonnement" value="3mois">
+            <form action="" method="post">
+                <input type="hidden" name="Abonnement" value={selectedDuration}>
+                <input type="hidden" name="Price" value={price}>
                 <input type="hidden" name="BoiteId" value="2">
                 <BoutonSubmit text="S'abonner" color="var(--blackBwhat)"/>
             </form>
