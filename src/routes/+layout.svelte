@@ -9,8 +9,7 @@
     import tiktok from "$lib/assets/social/tiktok.svg"
 	import { slide } from "svelte/transition";
     import { derived } from "svelte/store";
-    import { onMount } from "svelte";
-    import { afterNavigate } from '$app/navigation';
+    import Matomo from "$lib/components/matomo.svelte";
 
 
     let menu = $state("/menu.svg");
@@ -26,26 +25,9 @@
 
     const user = $page.data.user;
 
-    // Matomo
-
-    onMount(() => {
-        const script = document.createElement('script');
-        script.async = true;
-        script.text = "var _paq = window._paq = window._paq || [];" +
-  "/* tracker methods like \"setCustomDimension\" should be called before \"trackPageView\" */" +
-  "_paq.push(['trackPageView']);" +
-  "_paq.push(['enableLinkTracking']);" +
-  "(function() {" +
-  "var u=\"https://bwhat.matomo.cloud/\";" +
-  "_paq.push(['setTrackerUrl', u+'matomo.php']);" +
-  "_paq.push(['setSiteId', '1']);";
-        document.body.appendChild(script);
-
-        const d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        //@ts-ignore
-        g.async=true; g.src='https://cdn.matomo.cloud/bwhat.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-    })
 </script>
+
+
 
 <header>
     <nav>
@@ -111,6 +93,8 @@
         <p>© Bwhat 2025 All rights reserved</p>
     </div>
 </footer>
+
+<Matomo />
 
 <style>
     header{

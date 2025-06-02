@@ -9,11 +9,14 @@ declare global {
 				id: int;
 				email: string;
 				role: string;
-			};
-    }
+			}
+		}
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+	}
+	interface Window {
+	_paq?: unknown[];
 	}
 }
 
