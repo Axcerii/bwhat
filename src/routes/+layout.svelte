@@ -38,10 +38,12 @@
   "(function() {" +
   "var u=\"https://bwhat.matomo.cloud/\";" +
   "_paq.push(['setTrackerUrl', u+'matomo.php']);" +
-  "_paq.push(['setSiteId', '1']);" +
-  "var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];" +
-  "g.async=true; g.src='https://cdn.matomo.cloud/bwhat.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);";
+  "_paq.push(['setSiteId', '1']);";
         document.body.appendChild(script);
+
+        const d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        //@ts-ignore
+        g.async=true; g.src='https://cdn.matomo.cloud/bwhat.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
     })
 </script>
 
