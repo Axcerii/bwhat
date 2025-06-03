@@ -39,10 +39,10 @@
         
         <form on:submit|preventDefault={handleSubmit}>
             <h2>
-                Besoin d'échanger avec nous ?
+                Besoin d'échanger avec nous&nbsp;?
             </h2>
             <h3>
-                On vous répondra avec plaisir ! 
+                On vous répondra avec plaisir&nbsp;! 
             </h3>
         
             <div class="nomPrenom">
@@ -108,6 +108,7 @@
         border: solid var(--orangeBwhat) 2px;
         padding: 1rem;
         font-family: var(--serifFont);
+        font-size: 1rem;
     }
 
     input::placeholder, textarea::placeholder{

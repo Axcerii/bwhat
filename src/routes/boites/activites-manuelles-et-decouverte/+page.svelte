@@ -116,8 +116,8 @@ function updatePrice(index: number) {
                 <img src={Ankorstore} alt="Logo de Ankorstore">
             </div>
             <p>
-                Chez Bwhat, on croit aux synergies positives. <br>
-                C’est pourquoi nous avons choisi de nous engager aux côtés d’Ankstore, une plateforme qui valorise le savoir-faire local, les créateurs indépendants et les produits engagés.Concrètement ? Certaines surprises que vous recevez dans votre boite mensuelle sont sélectionnées directement auprès d’artisans et de petites marques présentes sur Ankstore.
+                Chez Bwhat, on croit aux synergies positives. <br> <br>
+                C’est pourquoi nous avons choisi de nous engager aux côtés d’Ankstore, une plateforme qui valorise le savoir-faire local, les créateurs indépendants et les produits engagés. <br> <br> Concrètement ? Certaines surprises que vous recevez dans votre boite mensuelle sont sélectionnées directement auprès d’artisans et de petites marques présentes sur Ankstore.
                 <br> <br>
                 Un partenariat qui a du sens : pour consommer autrement et encourager l’économie locale.
             </p>
@@ -164,7 +164,6 @@ function updatePrice(index: number) {
 
     .abonnement-infos > h1{
         font-family: var(--serifFont);
-        text-transform: uppercase;
     }
 
     .abonnement-infos > h2{

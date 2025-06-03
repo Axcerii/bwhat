@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
 	import BoutonLink from '$lib/components/boutonLink.svelte';
+    import vagueBottom from '$lib/assets/structure/newsletterBgBottom.svg';
 
     export let data: PageData;
 
@@ -15,46 +16,52 @@
 </svelte:head>
 
 <main>
-    <section class="infos-compte">
-        <h1>  
-            {#if user.name}
+    <section class="infos-unique">
+        <section class="infos-compte">
+            <h1>  
+                {#if user.name}
                 Bienvenue {user.name}&nbsp;!
-            {:else}
+                {:else}
                 Bienvenue !
-            {/if}
-        </h1>
-
-        <h2>Informations personnelles</h2>
-
-        <div>
-            <label for="firstname">
-                Prénom :
-            </label>
-            <input type="text" name="firstname" id="firstname" value="{user.name}" placeholder="Votre prénom" readonly>
-            <a href="/editer-profil">modifier</a>
+                {/if}
+            </h1>
+            
+            <h3>Informations personnelles</h3>
+            
+            <div>
+                <label for="firstname">
+                    Prénom :
+                </label>
+                <input type="text" name="firstname" id="firstname" value="{user.name}" placeholder="Votre prénom" readonly>
+                <a href="/editer-profil">modifier</a>
+            </div>
+            <div>
+                <label for="lastname">
+                    Nom :
+                </label>
+                <input type="text" name="lastname" id="lastname" value="{user.surname}" placeholder="Votre nom" readonly>
+                <a href="/editer-profil">modifier</a>
+            </div>
+            <div>
+                <label for="email">
+                    E-mail : 
+                </label>
+                <input type="email" name="email" id="email" value="{user.email}" readonly>
+                <a href="/editer-profil">modifier</a>
+            </div>
+            <p style="display: none">Voulez-vous changer de mot de passe ? C'est ici : <a href="/editer-profil">changer mon mot de passe</a></p>
+        </section>
+        <div class="vague-container" aria-hidden="true">
+            <img src={vagueBottom} alt="" aria-hidden="true" class="vague">
         </div>
-        <div>
-            <label for="lastname">
-                Nom :
-            </label>
-            <input type="text" name="lastname" id="lastname" value="{user.surname}" placeholder="Votre nom" readonly>
-            <a href="/editer-profil">modifier</a>
-        </div>
-        <div>
-            <label for="email">
-                E-mail : 
-            </label>
-            <input type="email" name="email" id="email" value="{user.email}" readonly>
-            <a href="/editer-profil">modifier</a>
-        </div>
-        <p style="display: none">Voulez-vous changer de mot de passe ? C'est ici : <a href="/editer-profil">changer mon mot de passe</a></p>
     </section>
 
-    <section class="adresses">
-        <h2>Vos adresses</h2>
-        <BoutonLink text="+ Ajouter une adresse" link="/editer-profil/ajouter-une-adresse" color="var(--blackBwhat)"/>
-        <div class="card-container">
-            {#each addresses as address}
+    <section class="infos-commandes">
+        <section class="adresses">
+            <h2>Vos adresses</h2>
+            <BoutonLink text="+ Ajouter une adresse" link="/editer-profil/ajouter-une-adresse" color="var(--blackBwhat)"/>
+            <div class="card-container">
+                {#each addresses as address}
                 <div class="adresse-block">
                     <p>{address.street}</p>
                     <p>{address.postalCode}, {address.city}</p>
@@ -62,22 +69,22 @@
                     <p>{address.phone}</p>
                     <p>{address.complement}</p>
                 </div>
-            {/each}
-        </div>
-    </section>
+                {/each}
+            </div>
+        </section>
 
-    <section class="abonnement">
-        <h2>Vos abonnements</h2>
-        <BoutonLink text="+ Avoir un abonnement" link="/nos-produits" color="var(--blackBwhat)"/>
-        <div class="card-container">
-            {#each abonnements as abonnement}
+        <section class="abonnement">
+            <h2>Vos abonnements</h2>
+            <BoutonLink text="+ Avoir un abonnement" link="/nos-produits" color="var(--blackBwhat)"/>
+            <div class="card-container">
+                {#each abonnements as abonnement}
                 <div class="abonnement-block">                    
                     <img src="{abonnement.box.imageUrl}" alt="{abonnement.box.name}">
                     <h3>{abonnement.box.name}</h3>
                     <p><strong>
                         Identifiant&nbsp;:
                     </strong> {abonnement.id}</p>
-
+                    
                     <p><strong>
                         Prix&nbsp;:
                     </strong> {abonnement.price}€</p>
@@ -87,30 +94,43 @@
                             Date d'achat&nbsp;:
                         </strong>
                         {new Date(abonnement.createdAt).toLocaleDateString('fr-FR')}</p>
-                    <p>
-                        <strong>
-                            Adresse de livraison&nbsp;:
-                        </strong>
-                     {abonnement.address.street}, {abonnement.address.city}</p>
+                <p>
+                    <strong>
+                        Adresse de livraison&nbsp;:
+                    </strong>
+                    {abonnement.address.street}, {abonnement.address.city}</p>
                     <p><strong>
                         Numéro de téléphone&nbsp;:
                     </strong>{abonnement.address.phone}</p>
                 </div>
-            {/each}
-        </div>
+                {/each}
+            </div>
+        </section>
     </section>
 </main>
-
+            
 <style>
-
+    
     main{
-        background-color: var(--lightOrangeBwhat);
         font-family: var(--sansFont);
     }
 
-    h1, h2{
+    .infos-unique{
+        background-color: var(--lightOrangeBwhat);
+    }
+
+    .infos-commandes{
+        background-color: #F2F2F2;
+    }
+
+    h1, h2, h3{
         margin-bottom: 1rem;
     }
+
+    h3{
+        font-size: 2rem;
+    }
+
     .infos-compte{
         display: flex;
         flex-direction: column;
@@ -136,6 +156,7 @@
         font-size: 1.2rem;
         font-weight: bold;
         transition: all ease-in-out 0.2s;
+        text-transform: capitalize;
     }
 
     .infos-compte > p{
@@ -179,6 +200,7 @@
         font-size: 1.2rem;
         margin: 2rem 0;
         width: 25rem;
+        background-color: var(--whiteBwhat);
 
         display: flex;
         flex-direction: column;
@@ -194,6 +216,7 @@
     .abonnement-block{
         padding: 1rem;
         border: var(--orangeBwhat) 4px solid;
+        background-color: var(--whiteBwhat);
         border-radius: 1rem;
         font-size: 1.2rem;
         margin: 2rem 0;
@@ -202,6 +225,13 @@
 
     .abonnement-block > img{
         width: 100%;
+    }
+
+    .vague-container{
+        width: 100%;
+        margin-top: -5rem;
+        height: 10rem;
+        background-color: #F2F2F2;
     }
 
         @media screen and (max-width: 1024px) {

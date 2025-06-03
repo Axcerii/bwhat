@@ -14,7 +14,7 @@
 
     <div class="container">
         <form aria-label="Newsletter" action="https://bwhat.us4.list-manage.com/subscribe/post?u=4aa2d1157ced43d1933da9f0c&amp;id=57ac4206b4&amp;f_id=00ddc2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-            <h2>Restez connectés à l'essentiel&nbsp;!</h2>
+            <h2>Pour vous abonner à notre newsletter, c'est ici&nbsp;!</h2>
             <img src={Pattern} alt="" aria-hidden="true"/>
             <input type="email" name="EMAIL" placeholder="Entrez votre e-mail" id="mce-EMAIL" required>
             

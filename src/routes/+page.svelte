@@ -85,6 +85,9 @@
 </main>
 
 <style>
+    h1{
+        margin-bottom: 1rem;
+    }
     main{
         display: flex;
         flex-direction: column;

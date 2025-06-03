@@ -42,6 +42,7 @@
         </div>
         <ul class="menu-top" class:open={isOpen} transition:slide data-sveltekit-reload>
             <div>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="/a-propos">À propos</a></li>
                 <li><a href="/nos-produits">Nos produits</a></li>
                 <li><a href="/nous-contacter">Contact</a></li>
@@ -82,17 +83,17 @@
         <ul>
             <li>
                 <a href="https://www.instagram.com/__bwhat__/" target="_blank">
-                    <img src="{instagram}" alt="logo instagram" width="60">
+                    <img src="{instagram}" alt="logo instagram" width="40">
                 </a>
             </li>
             <li>
                 <a href="https://www.linkedin.com/company/bwhat/" target="_blank">
-                    <img src="{linkedin}" alt="logo linkedin" width="70">
+                    <img src="{linkedin}" alt="logo linkedin" width="50">
                 </a>
             </li>
             <li>
                 <a href="https://www.tiktok.com/@_bwhat" target="_blank">
-                    <img src="{tiktok}" alt="logo tiktok" width="72">
+                    <img src="{tiktok}" alt="logo tiktok" width="42">
                 </a>
             </li>
         </ul>

@@ -22,10 +22,10 @@
                 <h1>À propos de Bwhat</h1>
                 <h2>Reprendre du temps pour soi : <br> Sans pression, sans écran.</h2>
                 <p>
-                    On s’est tous dit un jour : <br> “Je passe trop de temps sur mon téléphone.” Mais entre le boulot, les notifications, les messages, les applis qui captent notre attention… <strong>difficile de décrocher.</strong><br> <br>
+                    On s’est tous dit un jour : <br> “Je passe trop de temps sur mon téléphone.” <br> <br> Mais entre le boulot, les notifications, les messages, les applis qui captent notre attention… <strong>difficile de décrocher.</strong><br> <br>
 
                     Nous sommes une petite équipe d’étudiants, amis dans la vie, et tous confrontés à la même chose : cette sensation de fatigue numérique, cette envie de lever les yeux, sans vraiment savoir comment s’y prendre. 
-                    Un jour, on a eu l’envie <strong> de faire un pas de côté. </strong> <br> 
+                    <br> <br>Un jour, on a eu l’envie <strong> de faire un pas de côté. </strong> <br> 
                     Pas pour “vivre mieux” comme dans les pubs, juste pour vivre un peu plus “pour de vrai”.
                     <br><br>
                     Alors, on s’est posé une question toute simple : <br><br>
@@ -37,7 +37,7 @@
             <div>
                 <h2>Un projet simple, mais sincère</h2>
                 <p>
-                 <br>   On voulait revenir à l’essentiel, et si possible, embarquer d’autres gens avec nous.
+                 <br>   On voulait revenir à l’essentiel, et si possible, embarquer d’autres gens avec nous. <br>
 
                  <br>   Alors on a créé <strong>Bwhat</strong> : un projet qui nous ressemble. 
 

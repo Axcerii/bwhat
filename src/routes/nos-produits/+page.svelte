@@ -5,8 +5,8 @@
     import banner from "$lib/assets/nos-produits/banniere-produits.webp";    
     let bannerUrl = "background-image: url('"+banner+"')";
 
-    import boiteDecouverte from "$lib/assets/nos-produits/box-decouverte.webp";
-    import boiteSport from "$lib/assets/nos-produits/box-sport-bien-etre.webp"
+    import boiteDecouverte from "$lib/assets/nos-produits/BwhatDecouverte.webp";
+    import boiteSport from "$lib/assets/nos-produits/BwhatSport.webp";
 
     import Newsletter from "$lib/components/newsletter.svelte";
  </script>
@@ -168,6 +168,7 @@
 
     h2{
         font-size: 3rem;
+        margin-bottom: 1rem;
     }
     
     .banner h3{
@@ -220,12 +221,8 @@
         position: relative;
     }
 
-    .produits-card > h2{
-        text-transform: uppercase;
-    }
-
     .produits-card > p{
-        font-size: 2rem;
+        font-size: 1.2rem;
         top: 30%;
         left: 10%;
         z-index: 2;
