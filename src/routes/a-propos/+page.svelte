@@ -15,7 +15,7 @@
     </svelte:head>
 
     <main>
-        <section class="banner" style="background-image: #F2F2F2);">
+        <section class="banner" style="background-color: #F2F2F2;">
             <div class="banner-card">
                 <h1>À propos de Bwhat</h1>
                 <h2>Reprendre du temps pour soi : <br> Sans pression, sans écran.</h2>
@@ -133,6 +133,7 @@
         font-family: var(--sansFont);
         width: 60%;
         margin: auto;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36);
     }
 
     .banner-card h2{
