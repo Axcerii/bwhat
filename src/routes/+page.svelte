@@ -41,14 +41,14 @@
         <h2>Deux boites, une même envie&nbsp;: prendre soin de vous</h2>
         <div class="boites">
             <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport-et-bien-etre"/>
-            <BoiteCard image="BwhatDecouverte" title="La box Activités Manuelles et Découverte" link="/boites/activites-manuelles-et-decouverte"/>
+            <BoiteCard image="BwhatDecouverte" title="La box Activités Manuelles et&nbsp;Découverte" link="/boites/activites-manuelles-et-decouverte"/>
         </div>
     </section>
 
     <section class="description">
         <h2>Bwhat c’est une pause simple, douce, nécessaire dans un quotidien souvent trop connecté.</h2>
         <h3>
-            Nos boites mensuelles sont conçues pour vous accompagner dans <span class="bolder"> un changement progressif. </span> <br>
+            Nos boites mensuelles sont conçues pour vous accompagner dans <span class="bolder"> un changement progressif. </span> <br> <br>
             Parce qu’on ne quitte pas son téléphone du jour au lendemain, mais on peut commencer… <span class="bolder">boîte après boîte&nbsp;!</span>
         </h3>
     </section>
@@ -237,7 +237,6 @@
     .notre-histoire-titres > p{
         font-family: var(--sansFont);
         font-size: 1.2rem;
-        font-weight: bold;
     }
 
     .notre-histoire-titres > div{

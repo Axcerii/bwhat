@@ -217,6 +217,7 @@
         padding: 1rem;
         border: var(--orangeBwhat) 4px solid;
         background-color: var(--whiteBwhat);
+
         border-radius: 1rem;
         font-size: 1.2rem;
         margin: 2rem 0;

@@ -205,9 +205,9 @@ function updatePrice(index: number) {
         border-radius: 25px;
         box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.36);
         transition: all ease-in-out 0.3s;
-        width: 25rem;
+        width: 10rem;
         max-width: 20%;
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .abonnement-selection button:hover{
