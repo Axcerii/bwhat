@@ -131,7 +131,7 @@
         }
 
         .submit-container{
-            width: 50%;
+            width: 100%;
         }
     }
 
