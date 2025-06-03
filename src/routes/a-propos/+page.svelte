@@ -1,12 +1,14 @@
 <script>
     //import banner from "$lib/assets/a-propos/banniere.webp";
-    import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
+    import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
     //import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
     
     import IconAPropos from "$lib/components/iconAPropos.svelte";
     import MembreCard from "$lib/components/membreCard.svelte";
     import Faq from "$lib/components/faq.svelte";
+
+    import Newsletter from "$lib/components/newsletter.svelte";
 
 </script>
     <svelte:head>
@@ -44,17 +46,7 @@
             </div>
             <img src={photoGroupe} alt="" aria-hidden="true">
         </section>
-        <section class="focus">
-            <h2>Ce que nous défendons, vraiment</h2>
-            <div>
-                <IconAPropos icon="heart" description="La douceur"/>
-                <IconAPropos icon="no-phone" description="La déconnexion progressive"/>
-                <IconAPropos icon="groupe" description="Le local et l'humain"/>
-                <IconAPropos icon="heart2" description="L'authenticité"/>
-            </div>
-        </section>
         <section class="notre-equipe">
-            <img src={vagueTop} alt="" aria-hidden="true" class="vague">
             <div>
                 <h2>Notre histoire</h2>
                 <div class="notre-equipe-carousel">
@@ -65,6 +57,16 @@
                     <MembreCard image="anais" titre="Chargée de communication" nom="Anaïs"/>
                     <MembreCard image="yelene" titre="Webdesigneuse" nom="Yélène"/>
                 </div>
+            </div>
+            <img src={vagueBottom} alt="" aria-hidden="true" class="vague">
+        </section>
+        <section class="focus">
+            <h2>Ce que nous défendons, vraiment</h2>
+            <div>
+                <IconAPropos icon="heart" description="La douceur"/>
+                <IconAPropos icon="no-phone" description="La déconnexion progressive"/>
+                <IconAPropos icon="groupe" description="Le local et l'humain"/>
+                <IconAPropos icon="heart2" description="L'authenticité"/>
             </div>
         </section>
         <section class="faq no-gap" id="faq">
@@ -88,6 +90,7 @@
                 </p>
             </div>
         </section>
+        <Newsletter/>
     </main>
 
 <style>
@@ -197,6 +200,7 @@
     .vague{
         width: 100%;
         z-index: -1;
+        background-color: #F2F2F2;
     }
 
     .notre-equipe{
@@ -227,7 +231,6 @@
     }
     
     .faq{
-        background-color: var(--lightOrangeBwhat);
         padding: 4rem 4rem 8rem 4rem;
         display: flex;
         gap: 2rem;
@@ -257,7 +260,7 @@
 
     .maintenant{
         width: 100%;
-        background-color: var(--lightOrangeBwhat);
+        background-color: #F2F2F2;
         text-align: center;
         padding-bottom: 5rem;
     }
