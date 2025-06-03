@@ -48,7 +48,6 @@
         </section>
         <section class="notre-equipe">
             <div>
-                <h2>Notre histoire</h2>
                 <div class="notre-equipe-carousel">
                     <MembreCard image="elodie" titre="Cheffe de projet" nom="Élodie"/>
                     <MembreCard image="faik" titre="Directeur artistique" nom="Faïk"/>
@@ -209,6 +208,7 @@
         margin: auto;
         display: flex;
         flex-direction: column;
+        padding-top: 5rem;
     }
 
     .notre-equipe h2{
@@ -220,7 +220,6 @@
         flex-direction: column;
         gap: 4rem;
         background-color: var(--lightOrangeBwhat);
-        padding-bottom: 8rem;
     }
     .notre-equipe-carousel{
         width: 90%;
