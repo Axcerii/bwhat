@@ -1,5 +1,5 @@
 <script>
-    import banner from "$lib/assets/a-propos/banniere.webp";
+    //import banner from "$lib/assets/a-propos/banniere.webp";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
     import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
@@ -15,9 +15,9 @@
     </svelte:head>
 
     <main>
-        <section class="banner" style="background-image: url({banner});">
-            <h1>À propos de Bwhat</h1>
+        <section class="banner" style="background-image: #F2F2F2);">
             <div class="banner-card">
+                <h1>À propos de Bwhat</h1>
                 <h2>Reprendre du temps pour soi : <br> Sans pression, sans écran.</h2>
                 <p>
                     On s’est tous dit un jour : <br> “Je passe trop de temps sur mon téléphone.” Mais entre le boulot, les notifications, les messages, les applis qui captent notre attention… <strong>difficile de décrocher.</strong><br> <br>
@@ -35,12 +35,11 @@
             <div>
                 <h2>Un projet simple, mais sincère</h2>
                 <p>
-                    On ne vient pas du monde du bien-être, ni du marketing.
-                    <br> On vient du réel. 
-                    <br>Des jobs d’étudiants, des agendas trop pleins, des messages lus et jamais répondus.
-                    <br> On voulait juste revenir à l’essentiel, et si possible, embarquer d’autres gens avec nous.
-                    <br>Alors on a créé Bwhat : un projet qui nous ressemble. 
-                    <br>Pas parfait, mais porté par l’envie de faire mieux, ensemble.
+                 <br>   On voulait revenir à l’essentiel, et si possible, embarquer d’autres gens avec nous.
+
+                 <br>   Alors on a créé <strong>Bwhat</strong> : un projet qui nous ressemble. 
+
+                 <br>   Pas parfait, mais porté par l’envie de faire mieux, ensemble.
                 </p>
             </div>
             <img src={photoGroupe} alt="" aria-hidden="true">
@@ -127,12 +126,12 @@
     .banner-card{
         border-radius: 20px;
         background-color: var(--whiteBwhat);
-        padding: 2rem;
+        padding: 4rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         font-family: var(--sansFont);
-        width: 40%;
+        width: 60%;
         margin: auto;
     }
 
@@ -172,7 +171,6 @@
     .problematique p{
         font-size: 1.2rem;
         font-family: var(--sansFont);
-        font-weight: bold;
     }
 
     .focus{
@@ -247,7 +245,6 @@
 
     .faq-titres p{
         font-family: var(--sansFont);
-        font-weight: bold;
         font-size: 1.2rem;
     }
 
@@ -295,7 +292,8 @@
 
     @media screen and (max-width: 768px) {
         .banner-card{
-            width: 80%;
+            width: 90%;
+            padding: 2rem;
         }
 
         .notre-equipe-carousel{
