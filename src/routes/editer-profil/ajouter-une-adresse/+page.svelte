@@ -119,7 +119,8 @@
 
     @media screen and (max-width: 1024px) {
         .infos-compte{
-            width: 95%;
+            width: 90%;
+            padding: 5rem 0;
         }
 
         .infos-compte > div{
