@@ -4,7 +4,7 @@
 
 <div class="icon-description">
     <div class="img-container">
-        <img src="/icons/{icon}.svg" alt="" aria-hidden="true" class="yellowBwhatSvg" width="50"> 
+        <img src="/icons/{icon}.svg" alt="" aria-hidden="true" class="orangeBwhatSvg" width="50"> 
     </div>
     <p>{description}</p>
 </div>

@@ -1,7 +1,7 @@
 <script>
     //import banner from "$lib/assets/a-propos/banniere.webp";
     import vagueTop from "$lib/assets/structure/newsletterBgTop.svg";
-    import faqImage from "$lib/assets/a-propos/faq.webp";
+    //import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
     
     import IconAPropos from "$lib/components/iconAPropos.svelte";
@@ -58,12 +58,12 @@
             <div>
                 <h2>Notre histoire</h2>
                 <div class="notre-equipe-carousel">
-                    <MembreCard image="elodie" titre="cheffe de projet" nom="Élodie"/>
-                    <MembreCard image="faik" titre="graphiste" nom="Faïk"/>
-                    <MembreCard image="davina" titre="conseillère digitale" nom="Davina"/>
-                    <MembreCard image="hugo" titre="développeur" nom="Hugo"/>
-                    <MembreCard image="anais" titre="responsable marketing" nom="Anaïs"/>
-                    <MembreCard image="yelene" titre="webdesigneuse" nom="Yélène"/>
+                    <MembreCard image="elodie" titre="Cheffe de projet" nom="Élodie"/>
+                    <MembreCard image="faik" titre="Directeur artistique" nom="Faïk"/>
+                    <MembreCard image="davina" titre="Chargée webmarketing" nom="Davina"/>
+                    <MembreCard image="hugo" titre="Développeur" nom="Hugo"/>
+                    <MembreCard image="anais" titre="Chargée de communication" nom="Anaïs"/>
+                    <MembreCard image="yelene" titre="Webdesigneuse" nom="Yélène"/>
                 </div>
             </div>
         </section>
@@ -71,7 +71,6 @@
             <div class="faq-titres">
                 <h2>Questions fréquentes</h2>
                 <p>Avant de nous écrire, jetez un œil à notre FAQ : vous y trouverez sûrement ce que vous cherchez !</p>
-                <img src={faqImage} alt="Un homme se questionne sur le fonctionnement de ce qui l'entoure">
             </div>
             <Faq/>
         </section>
@@ -182,6 +181,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        background-color: #F2F2F2;
     }
 
     .focus > div{

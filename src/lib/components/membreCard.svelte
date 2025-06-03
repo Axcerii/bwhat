@@ -36,14 +36,13 @@
     }
 
     .etiquettes h3{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: var(--whiteBwhat);
     }
 
     .etiquettes p{
         font-size: 1.2rem;
-        color: var(--orangeBwhat);
-        text-transform: lowercase;
         font-family: var(--sansFont);
+        color: var(--whiteBwhat);
     }
 </style>
