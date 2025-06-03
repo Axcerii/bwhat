@@ -48,24 +48,40 @@
                         titre="Une recette cartonnée + 1 échantillon"
                         alt="Pot de Beurre de Cacahuète"
                         bgColor="var(--blueBwhat)"
+                        nom="Beurre de Cacahuète - Extra Onctueux 40g"
+                        titres="Poids Net,Liste INCI,DDM"
+                        complements="40g,Ingrédients : Cacahuète hi-oléique et sel marin,12 mois"
+                        categorie="Eco-Friendly,Cruelty Free,Vegan,Fabriqué en Espagne"
                     />
                     <ProduitCategorie 
                         imageProduct="echantillonServiette"
                         titre="Un équipement d'entraînement"
                         alt="Serviette de Sport"
                         bgColor="var(--blueBwhat)"
+                        nom="Serviette de Sport microfibre 35x80cm"
+                        titres="Poids NET,Liste INCI"
+                        complements="10 g,Composition : 100% polyester"
+                        categorie="Fait main,Fabriquée en Espagne"
                     />
                     <ProduitCategorie 
                         imageProduct="echantillonCordeASauter"
                         titre="Un accessoire de sport"
                         alt="Corde à sauter"
                         bgColor="var(--blueBwhat)"
+                        nom="Corde à sauter 240cm poignées en bois"
+                        titres="Poids Net,Liste INCI"
+                        complements="20g,Composition : 60% polyester 40 bois"
+                        categorie="Fait main,Fabriquée en France"
                     />
                     <ProduitCategorie 
                         imageProduct="echantillonRouleauDePeau"
                         titre="Un produit bien-être"
                         alt="Rouleau pour la peau"
                         bgColor="var(--blueBwhat)"
+                        nom="Roller en jade vert en pierre naturelle"
+                        titres="Poids Net,Dimensions"
+                        complements="7g, 14cm x 5cm"
+                        categorie="Cruelty Free, Fabriqué au Portugal"
                     />
                 </div>
             </div>
