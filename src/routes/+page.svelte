@@ -77,8 +77,8 @@
                 </div>
             </div>
         </div>
-        <Newsletter/>
     </section>
+    <Newsletter/>
     <img src="{vagueBottom}" alt="" aria-hidden="true" class="vague bottom">
 
     

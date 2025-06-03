@@ -1,7 +1,7 @@
 <script>
     import card1 from "$lib/assets/home/UnCoupleCuisine.webp";
-    import card2 from "$lib/assets/home/UneFemmeFaitDuYoga.webp";
-    import card3 from "$lib/assets/home/FemmePoterie.webp";
+    import card2 from "$lib/assets/home/FemmePoterie.webp";
+    import card3 from "$lib/assets/home/UneFemmeFaitDuYoga.webp";
 </script>
 
 <div class="cartesCanvas">
@@ -11,10 +11,10 @@
     </div>
     <div class="carte carte2">
         <p class="text text2">Découvrir, créer, respirer autrement</p>
-        <img src={card2} alt="Une femme s'étire en faisant du yoga">
+        <img src={card2} alt="Une femme peint un pot d'argile qu'elle vient de fabriquer">
     </div>
     <div class="carte carte3">
-        <img src={card3} alt="Une femme peint un pot d'argile qu'elle vient de fabriquer">
+        <img src={card3} alt="Une femme s'étire en faisant du yoga">
         <p class="text text3">Sortir de la routine numérique</p>
     </div>
 </div>
