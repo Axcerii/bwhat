@@ -60,7 +60,7 @@
             </div>
             <img src={vagueBottom} alt="" aria-hidden="true" class="vague">
         </section>
-        <section class="focus">
+        <section class="focus no-gap">
             <h2>Ce que nous défendons, vraiment</h2>
             <div>
                 <IconAPropos icon="heart" description="La douceur"/>
@@ -186,6 +186,7 @@
         text-align: center;
 
         background-color: #F2F2F2;
+        padding: 5rem 0;
     }
 
     .focus > div{
@@ -262,7 +263,7 @@
         width: 100%;
         background-color: #F2F2F2;
         text-align: center;
-        padding-bottom: 5rem;
+        padding: 5rem 0;
     }
 
     .maintenant > div{
