@@ -313,6 +313,10 @@
 
 
     @media screen and (max-width: 1024px){
+        .offres-titres{
+            width: 90%;
+        }
+
         .offres-prix > div{
             width: 10rem;
             height: 10rem;

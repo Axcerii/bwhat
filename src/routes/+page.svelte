@@ -38,7 +38,7 @@
     </section>
 
     <section class="boites-details">
-        <h2>Deux boites, une même envie : prendre soin de vous</h2>
+        <h2>Deux boites, une même envie&nbsp;: prendre soin de vous</h2>
         <div class="boites">
             <BoiteCard image="BwhatSport" title="La box Sport & Bien-être" link="/boites/sport-et-bien-etre"/>
             <BoiteCard image="BwhatDecouverte" title="La box Activités Manuelles et Découverte" link="/boites/activites-manuelles-et-decouverte"/>
@@ -79,7 +79,6 @@
         </div>
     </section>
     <Newsletter/>
-    <img src="{vagueBottom}" alt="" aria-hidden="true" class="vague bottom">
 
     
 
@@ -169,10 +168,11 @@
     }
 
     .description h3{
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: var(--sansFont);
         width: 80%;
         margin: auto;
+        font-weight: normal;
     }
 
     .description .bolder{
@@ -280,7 +280,11 @@
 
         .presentation > h2{
             text-align: center;
-            width: 100%;
+            width: 95%;
+        }
+
+        .boites-details h2{
+            width: 90%;
         }
     }
 

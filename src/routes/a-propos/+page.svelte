@@ -141,6 +141,7 @@
         text-align: center;
         color: var(--orangeBwhat);
         margin: auto;
+        font-size: 2rem;
     }
 
     .banner-card p{
@@ -208,10 +209,6 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-    }
-
-    .notre-equipe h2{
-        text-align: center;
     }
 
     .notre-equipe > div{

@@ -63,8 +63,8 @@ function updatePrice(index: number) {
             </form>
             <hr />
             <p>
-                Notre box ne se contente pas de divertir : elle apporte du bien-être, incite à adopter de nouvelles habitudes positives et encourage un meilleur équilibre entre digital et réalité. <br>
-                Loin d’un simple « produit », c’est un outil pour améliorer son quotidien !
+                Notre box ne se contente pas de divertir : elle apporte du <strong> bien-être </strong>, incite à adopter de nouvelles habitudes positives et encourage un meilleur équilibre entre digital et réalité. <br>
+                Loin d’un simple « produit », c’est un outil pour <strong>améliorer son quotidien ! </strong>
             </p>
         </div>
     </section>
@@ -167,6 +167,10 @@ function updatePrice(index: number) {
         text-transform: uppercase;
     }
 
+    .abonnement-infos > h2{
+        font-size: 2rem;
+    }
+
     .abonnement-infos> p{
         font-size: 1.2rem;
         padding: 1rem 0;
@@ -198,11 +202,11 @@ function updatePrice(index: number) {
 
     .abonnement-selection button{
         background-color: var(--lightOrangeBwhat);
-        padding: 2rem 1rem;
+        padding: 1rem 0.5rem;
         border-radius: 25px;
         box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.36);
         transition: all ease-in-out 0.3s;
-        width: 30rem;
+        width: 25rem;
         max-width: 20%;
         font-size: 2rem;
     }

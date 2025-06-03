@@ -41,17 +41,23 @@
             </a>
         </div>
         <ul class="menu-top" class:open={isOpen} transition:slide data-sveltekit-reload>
-            <li><a href="/a-propos">À propos</a></li>
-            <li><a href="/nos-produits">Nos produits</a></li>
-            <li><a href="/nous-contacter">Contact</a></li>
+            <div>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/nos-produits">Nos produits</a></li>
+                <li><a href="/nous-contacter">Contact</a></li>
+            </div>
         {#if !user}
-            <li><a href="/se-connecter">Se connecter</a></li>
-            <li><a href="/creer-un-compte">S'inscrire</a></li>
+            <div>
+                <li><a href="/se-connecter">Se connecter</a></li>
+                <li><a href="/creer-un-compte">S'inscrire</a></li>
+            </div>
         {/if}
 
         {#if user}
-            <li><a href="/mon-compte">Mon compte</a></li>
-            <li><a href="/se-deconnecter">Se déconnecter</a></li>
+            <div>
+                <li><a href="/mon-compte">Mon compte</a></li>
+                <li><a href="/se-deconnecter">Se déconnecter</a></li>
+            </div>
         {/if}
         </ul>
     </nav>
@@ -116,8 +122,15 @@
     .menu-top{
         display: flex;
         gap: 2rem;
-        margin: auto 0;
+        margin: auto 2rem auto 0;
         font-size: 1.2rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-top div{
+        display: flex;
+        gap: 2rem;
     }
 
     .menu-top li{
@@ -224,6 +237,10 @@
         .menu-top{
             flex-direction: column;
             display: none;
+        }
+
+        .menu-top div{
+            flex-direction: column;
         }
 
         .menu-top.open{

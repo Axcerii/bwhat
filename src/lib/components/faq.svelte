@@ -36,7 +36,7 @@
 <style>
     .faq{
         padding: 4rem;
-        background-color: var(--pinkBwhat);
+        background-color: var(--lightOrangeBwhat);
         font-family: var(--sansFont);
         border-radius: 25px;
 

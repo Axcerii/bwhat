@@ -41,7 +41,7 @@
     h4{
         font-weight: bold;
         font-size: 1.5rem;
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: left;
     }
@@ -58,5 +58,6 @@
         width: 80%;
         text-align: left;
         font-size: 1.2rem;
+        padding-top: 1rem;
     }
 </style>
