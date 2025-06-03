@@ -166,10 +166,14 @@
         padding: 2rem;
     }
 
+    h2{
+        font-size: 3rem;
+    }
+    
     .banner h3{
         font-family: var(--sansFont);
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .banner-titres{
