@@ -270,7 +270,6 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        font-weight: 700;
         margin: auto;
     }
 

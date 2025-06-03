@@ -10,13 +10,13 @@ import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
 let bgProduits = "background-image: url('"+Pattern+"')";
 
 let price = 39;
-let selectedDuration = "3mois";
+let selectedDuration = "3 mois";
 let selectedIndex = 0;
 
 const abonnements = [
-    { duration: "3mois", price: 39 },
-    { duration: "6mois", price: 37 },
-    { duration: "12mois", price: 35 }
+    { duration: "3 mois", price: 39 },
+    { duration: "6 mois", price: 37 },
+    { duration: "12 mois", price: 35 }
 ];
 
 function updatePrice(index: number) {
@@ -153,7 +153,6 @@ function updatePrice(index: number) {
     .abonnement-infos> p{
         font-size: 1.2rem;
         padding: 1rem 0;
-        font-weight: 500;
     }
 
     hr{
@@ -254,7 +253,6 @@ function updatePrice(index: number) {
 
     .fournisseur p{
         font-size: 1.5rem;
-        font-weight: 500;
         font-family: var(--sansFont);
     }
 

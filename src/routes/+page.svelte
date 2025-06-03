@@ -171,7 +171,6 @@
     .description h3{
         font-size: 2rem;
         font-family: var(--sansFont);
-        font-weight: 600;
         width: 80%;
         margin: auto;
     }

@@ -265,6 +265,7 @@
     .offres-titres> p{
         font-family: var(--sansFont);
         margin-top: 1rem;
+        font-size: 1.2rem;
     }
 
     .offres-prix{

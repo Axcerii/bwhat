@@ -90,7 +90,6 @@
         font-family: var(--sansFont);
         color: var(--orangeBwhat);
         text-align: center;
-        font-size: 2rem;
     }
 
     h3{
