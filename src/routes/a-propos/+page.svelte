@@ -208,7 +208,6 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        padding-top: 5rem;
     }
 
     .notre-equipe h2{
@@ -220,6 +219,7 @@
         flex-direction: column;
         gap: 4rem;
         background-color: var(--lightOrangeBwhat);
+        padding-top: 5rem;
     }
     .notre-equipe-carousel{
         width: 90%;

@@ -4,7 +4,7 @@
 
 <div class="icon-description">
     <div class="img-container">
-        <img src="/icons/{icon}.svg" alt="" aria-hidden="true" class="orangeBwhatSvg" width="50"> 
+        <img src="/icons/{icon}.svg" alt="" aria-hidden="true" class="orangeBwhatSvg" width="80"> 
     </div>
     <p>{description}</p>
 </div>
@@ -28,7 +28,7 @@
     p{
         font-size: 1.2rem;
         font-family: var(--serifFont);
-        color: var(--yellowBwhat);
+        color: var(--orangeBwhat);
         text-align: center;
         width: 100%;
     }

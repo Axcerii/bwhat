@@ -1,20 +1,20 @@
 <script>
-    import card1 from "$lib/assets/home/HommeCuisine.webp";
-    import card2 from "$lib/assets/home/FemmeMeditation.webp";
-    import card3 from "$lib/assets/home/TroisPersonnesPoteries.webp";
+    import card1 from "$lib/assets/home/UnCoupleCuisine.webp";
+    import card2 from "$lib/assets/home/UneFemmeFaitDuYoga.webp";
+    import card3 from "$lib/assets/home/FemmePoterie.webp";
 </script>
 
 <div class="cartesCanvas">
     <div class="carte carte1">
-        <img src={card1} alt="Une famille s'amuse en faisant une bataille d'oreiller">
+        <img src={card1} alt="Une couple est en train de cuisiner ensemble">
         <p class="text text1">Vous reconnecter à vous-même</p>
     </div>
     <div class="carte carte2">
         <p class="text text2">Découvrir, créer, respirer autrement</p>
-        <img src={card2} alt="Un couple rigole sur un tapis de yoga">
+        <img src={card2} alt="Une femme s'étire en faisant du yoga">
     </div>
     <div class="carte carte3">
-        <img src={card3} alt="Des nageurs dans un océan célèbrent une victoire">
+        <img src={card3} alt="Une femme peint un pot d'argile qu'elle vient de fabriquer">
         <p class="text text3">Sortir de la routine numérique</p>
     </div>
 </div>

@@ -98,7 +98,6 @@
 
 <style>
     header{
-        border-top: var(--orangeBwhat) solid 2.5rem;
         padding: 2rem;
     }
 
@@ -205,7 +204,6 @@
         }
 
         header{
-            border-top: none;
             min-height: 6rem;
         }
 
