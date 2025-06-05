@@ -1,5 +1,5 @@
 <script>
-    import banner from "$lib/assets/a-propos/photoDeGroupe.webp";
+    import banner from "$lib/assets/a-propos/BanniereApropos.webp";
     import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
     //import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
