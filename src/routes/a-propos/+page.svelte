@@ -23,7 +23,6 @@
                 <h2>Reprendre du temps pour soi : <br> Sans pression, sans écran.</h2>
                 <p>
                     On s’est tous dit un jour : <br> “Je passe trop de temps sur mon téléphone.” <br> <br> Mais entre le boulot, les notifications, les messages, les applis qui captent notre attention… <strong>difficile de décrocher.</strong><br> <br>
-
                     Nous sommes une petite équipe d’étudiants, amis dans la vie, et tous confrontés à la même chose : cette sensation de fatigue numérique, cette envie de lever les yeux, sans vraiment savoir comment s’y prendre. 
                     <br> <br>Un jour, on a eu l’envie <strong> de faire un pas de côté. </strong> <br> 
                     Pas pour “vivre mieux” comme dans les pubs, juste pour vivre un peu plus “pour de vrai”.
@@ -248,6 +247,7 @@
     .faq-titres p{
         font-family: var(--sansFont);
         font-size: 1.2rem;
+        text-align: center;
     }
 
     .faq-titres img{

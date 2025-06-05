@@ -79,9 +79,6 @@
         </div>
     </section>
     <Newsletter/>
-
-    
-
 </main>
 
 <style>
@@ -172,7 +169,7 @@
 
     .description h3{
         font-size: 1.2rem;
-        font-family: var(--sansFont);
+        font-family: var(--sansFont);   
         width: 80%;
         margin: auto;
         font-weight: normal;
@@ -294,6 +291,10 @@
         .banner > div{
             width: 100%;
             padding: 2rem;
+        }
+
+        .vague-container{
+            margin-top: -8rem;
         }
 
         .banner-button-container{
