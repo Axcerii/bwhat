@@ -253,10 +253,6 @@
         background-color: var(--whiteBwhat);
     }
 
-    .bottom{
-        margin-top: -8rem;
-    }
-
     .top{
         background-color: #F2F2F2;
         margin-top: -8rem;

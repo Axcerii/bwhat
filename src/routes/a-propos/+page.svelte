@@ -3,7 +3,6 @@
     import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
     //import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
-    import BoutonLink from "$lib/components/boutonLink.svelte";
 
     import IconAPropos from "$lib/components/iconAPropos.svelte";
     import MembreCard from "$lib/components/membreCard.svelte";
@@ -22,9 +21,6 @@
             <div>
                 <h1>Découvrez notre histoire</h1>
                 <p class="sous-titre">Notre projet, notre équipe, nos valeurs</p>
-                <div class="banner-button-container">
-                    <BoutonLink text="En savoir plus" link="/a-propos"/>
-                </div>
             </div>
             <img src={banner} alt="Visuel d'une boite avec un effet stylisé">
         </section>
@@ -299,11 +295,6 @@
         font-family: var(--sansFont);
         font-size: 1.2rem;
         text-align: center;
-    }
-
-    .faq-titres img{
-        width: 80%;
-        margin: auto;
     }
 
     .maintenant{
