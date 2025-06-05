@@ -61,7 +61,7 @@
     </h2>
 
     <p>
-        L’ensemble des éléments visuels, sonores, textuels, graphiques ou photographiques présents sur le site Bwhat (y compris le logo, les illustrations, les textes des box et les contenus éditoriaux) sont la propriété exclusive de [Nom de l’entreprise] ou de ses partenaires, et sont protégés par les lois françaises et internationales relatives à la propriété intellectuelle.
+        L’ensemble des éléments visuels, sonores, textuels, graphiques ou photographiques présents sur le site Bwhat (y compris le logo, les illustrations, les textes des box et les contenus éditoriaux) sont la propriété exclusive de Bwhat ou de ses partenaires, et sont protégés par les lois françaises et internationales relatives à la propriété intellectuelle.
 
         <br>Toute reproduction, modification, diffusion ou exploitation sans autorisation préalable écrite est formellement interdite, et peut constituer une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.
     </p>
@@ -75,7 +75,7 @@
 
         <br>Bwhat s’engage à respecter la loi “Informatique et Libertés” du 6 janvier 1978 ainsi que le Règlement Général sur la Protection des Données (RGPD).
 
-        <br>Vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition aux données personnelles vous concernant. Pour toute demande relative à vos données, vous pouvez écrire à : [adresse e-mail dédiée RGPD]
+        <br>Vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition aux données personnelles vous concernant. Pour toute demande relative à vos données, vous pouvez écrire à : serenagaujes@bwhat.fr
 
         <br>Les données ne sont ni vendues ni cédées à des tiers. Nous utilisons uniquement des prestataires conformes au RGPD pour l’hébergement, le paiement et les outils de communication.
     </p>

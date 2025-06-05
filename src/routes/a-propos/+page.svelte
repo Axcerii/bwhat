@@ -1,9 +1,10 @@
 <script>
-    //import banner from "$lib/assets/a-propos/banniere.webp";
+    import banner from "$lib/assets/a-propos/photoDeGroupe.webp";
     import vagueBottom from "$lib/assets/structure/newsletterBgBottom.svg";
     //import faqImage from "$lib/assets/a-propos/faq.webp";
     import photoGroupe from "$lib/assets/a-propos/photoDeGroupe.webp"
-    
+    import BoutonLink from "$lib/components/boutonLink.svelte";
+
     import IconAPropos from "$lib/components/iconAPropos.svelte";
     import MembreCard from "$lib/components/membreCard.svelte";
     import Faq from "$lib/components/faq.svelte";
@@ -17,7 +18,18 @@
     </svelte:head>
 
     <main>
-        <section class="banner" style="background-color: #F2F2F2;">
+        <section class="banner">
+            <div>
+                <h1>Découvrez notre histoire</h1>
+                <p class="sous-titre">Notre projet, notre équipe, nos valeurs</p>
+                <div class="banner-button-container">
+                    <BoutonLink text="En savoir plus" link="/a-propos"/>
+                </div>
+            </div>
+            <img src={banner} alt="Visuel d'une boite avec un effet stylisé">
+        </section>
+
+        <section class="banner-text no-gap" style="background-color:var(--pinkBwhat);">
             <div class="banner-card">
                 <h1>À propos de Bwhat</h1>
                 <h2>Reprendre du temps pour soi : <br> Sans pression, sans écran.</h2>
@@ -103,14 +115,53 @@
         margin-top: -8rem;
     }
 
-    h1{
+    .banner-text h1{
         text-align: center;
         background-color: #ffffffcc;
         padding: 0.5rem 2rem;
         border-radius: 10px;
     }
 
-    .banner{
+     .banner{
+        width: 100%;
+        height: 40rem;
+        position: relative;
+    }
+
+    .banner img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .banner > div{
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0 5rem 5rem;
+        width: 30rem;
+        gap: 1rem;
+    }
+
+    .banner > div > *{
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.36);
+    }
+
+    .sous-titre{
+        font-family: var(--sansFont);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .banner-button-container{
+        width: 60%;
+        margin-top: 2rem;
+    }
+
+    .banner-text{
         display: flex;
         flex-direction: column;
         gap: 2rem;
