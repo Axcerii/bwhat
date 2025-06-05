@@ -2,12 +2,15 @@
     import type { PageData } from './$types';
 	import BoutonLink from '$lib/components/boutonLink.svelte';
     import vagueBottom from '$lib/assets/structure/newsletterBgBottom.svg';
+    import { page } from '$app/state';
 
     export let data: PageData;
 
     const user = data.user;
     const addresses = data.addresses;
     const abonnements = data.subscriptions;
+
+  const errorMessage = page.url.searchParams.get('error');
 </script>
 
 <svelte:head>
@@ -28,6 +31,11 @@
             
             <h3>Informations personnelles</h3>
             
+            {#if errorMessage}
+                <div class="error">
+                    {errorMessage}
+                </div>
+            {/if}
             <div>
                 <label for="firstname">
                     Prénom :
@@ -78,7 +86,7 @@
             <BoutonLink text="+ Avoir un abonnement" link="/nos-produits" color="var(--blackBwhat)"/>
             <div class="card-container">
                 {#each abonnements as abonnement}
-                <div class="abonnement-block">                    
+                <div class="abonnement-block">
                     <img src="{abonnement.box.imageUrl}" alt="{abonnement.box.name}">
                     <h3>{abonnement.box.name}</h3>
                     <p><strong>
@@ -113,6 +121,14 @@
     
     main{
         font-family: var(--sansFont);
+    }
+
+    .error{
+        color: rgb(86, 3, 3);
+        background-color: rgb(255, 144, 144);
+        border: 2px solid red;
+        padding: 1rem;
+        border-radius: 10px;
     }
 
     .infos-unique{

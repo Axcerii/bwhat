@@ -49,7 +49,7 @@ function updatePrice(index: number) {
                 </div>
             </div>
 
-            <form action="" method="get">
+            <form action="/boites/paiement" method="post">
                 <input type="hidden" name="Abonnement" value={selectedDuration}>
                 <input type="hidden" name="Price" value={price}>
                 <input type="hidden" name="BoiteId" value="2">
