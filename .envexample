@@ -1,2 +1,2 @@
-DATABASE_URL = "mysql://IDENTIFIANT:PASSWORD@HOST:PORT/DATABASE_NAME"
+DATABASE_URL = "mysql://root:password@db:3306/mydb"
 JWT_SECRET = "Secret"
