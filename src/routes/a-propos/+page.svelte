@@ -61,7 +61,7 @@
                     <MembreCard image="davina" titre="Chargée webmarketing" nom="Davina"/>
                     <MembreCard image="hugo" titre="Développeur" nom="Hugo"/>
                     <MembreCard image="anais" titre="Chargée de communication" nom="Anaïs"/>
-                    <MembreCard image="yelene" titre="Webdesigneuse" nom="Yélène"/>
+                    <MembreCard image="yelene" titre="Directrice Artistique" nom="Yélène"/>
                 </div>
             </div>
             <img src={vagueBottom} alt="" aria-hidden="true" class="vague">
