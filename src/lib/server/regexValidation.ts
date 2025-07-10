@@ -13,3 +13,7 @@ export function isValidPostalCode(postalCode: string): boolean {
 export function isValidPhoneNumber(phone: string): boolean {
   return /^0[1-9](?:[\s.-]?\d{2}){4}$/.test(phone);
 }
+
+export function isValidPlainText(text: string): boolean {
+  return !/[<>'"&`]/.test(text);
+}
