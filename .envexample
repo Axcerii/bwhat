@@ -1,2 +1,4 @@
 DATABASE_URL = "mysql://root:password@db:3306/mydb"
 JWT_SECRET = "Secret"
+STRIPE_SECRET_KEY="sk_test_..."
+STRIPE_VER = "2025-06-30.basil."
