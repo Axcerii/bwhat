@@ -57,7 +57,7 @@
             <div>
                 <div class="notre-equipe-carousel">
                     <MembreCard image="elodie" titre="Cheffe de projet" nom="Élodie"/>
-                    <MembreCard image="faik" titre="Directeur artistique" nom="Faïk"/>
+                    <MembreCard image="faik" titre="Graphiste" nom="Faïk"/>
                     <MembreCard image="davina" titre="Chargée webmarketing" nom="Davina"/>
                     <MembreCard image="hugo" titre="Développeur" nom="Hugo"/>
                     <MembreCard image="anais" titre="Chargée de communication" nom="Anaïs"/>
